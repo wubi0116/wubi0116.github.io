@@ -112,7 +112,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "a4b1d6d89c1da3b1d565";
+/******/ 	var hotCurrentHash = "d143a574b9f18792f08c";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1094,7 +1094,7 @@ exports.push([module.i, "\nbody[data-v-3d25fde5] {\n\twidth: 100%;\n\theight: 10
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "",{"version":3,"sources":[],"names":[],"mappings":"","file":"card.vue"}]);
+exports.push([module.i, "\n.card[data-v-3d28efbc] {\n    width: 100%;\n    top: 50%;\n}\n", "",{"version":3,"sources":["src/js/components/card.vue","card.vue"],"names":[],"mappings":";AAqCA;IACA,WAAA;IACA,QAAA;ACnCA","file":"card.vue","sourcesContent":["<template>\n    <div>\n        <img src=\"https://github.com/wubi0116/wubi0116.github.io/blob/master/images/birthday-card.png?raw=true\" class=\"card\">\n    </div>\n</template>\n\n<script>\nexport default {\n\tdata: function() {\n\t\treturn {\n\n\t\t}\n\t},\n\n\tcreated: function() {\n\n\t},\n\t\n\tcomponents: {\n\n\t},\n\t\n\tcomputed: {\n\t\t\n\t},\n\t\n\twatch: {\n\n\t},\n\n\tmethods: {\n\t\t\n\t}\n  }\n</script>\n\n<style scoped>\n    .card {\n        width: 100%;\n        top: 50%;\n    }\n</style>","\n.card[data-v-3d28efbc] {\n    width: 100%;\n    top: 50%;\n}\n"]}]);
 
 
 
@@ -1273,7 +1273,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h2", [_vm._v(" Hello ")])])
+    return _c("div", [
+      _c("img", {
+        staticClass: "card",
+        attrs: {
+          src:
+            "https://github.com/wubi0116/wubi0116.github.io/blob/master/images/birthday-card.png?raw=true"
+        }
+      })
+    ])
   }
 ]
 render._withStripped = true
