@@ -112,7 +112,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "0796a1367d073e2a5755";
+/******/ 	var hotCurrentHash = "0156a509afab199024f0";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -890,9 +890,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/js/components/main.vue":
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/js/components/cake.vue":
 /*!**********************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/js/components/main.vue ***!
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/js/components/cake.vue ***!
   \**********************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -922,10 +922,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      pudding_shake: false
+      pudding_shake: false,
+      count: 0,
+      images: ['click-me', 'hbd']
     };
   },
   created: function created() {},
@@ -933,21 +938,110 @@ __webpack_require__.r(__webpack_exports__);
   computed: {},
   watch: {},
   methods: {
+    set_dialog_index: function set_dialog_index() {
+      var dialogs = document.getElementsByClassName("dialog");
+
+      for (var i = 0; i < dialogs.length; i++) {
+        var _dialog = dialogs[i];
+        _dialog.style = 'opacity: 0;';
+      }
+
+      var dialog = document.getElementsByClassName("dialog")[this.count];
+      dialog.style = 'opacity: 1;';
+      this.count += 1;
+    },
     set_pudding_shake: function set_pudding_shake() {
       this.pudding_shake = !this.pudding_shake;
       var pudding = document.getElementsByClassName("pudding")[0];
-      var dialog = document.getElementsByClassName("dialog")[0];
 
       if (this.pudding_shake) {
         pudding.classList.add("pudding_clicked");
-        dialog.style = "opacity: 1";
       } else {
         pudding.classList.remove("pudding_clicked");
-        dialog.style = "opacity: 0";
       }
     }
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/js/components/card.vue":
+/*!**********************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/js/components/card.vue ***!
+  \**********************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {};
+  },
+  created: function created() {},
+  components: {},
+  computed: {},
+  watch: {},
+  methods: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/js/components/main.vue":
+/*!**********************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/js/components/main.vue ***!
+  \**********************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cake_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cake.vue */ "./src/js/components/cake.vue");
+/* harmony import */ var _card_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./card.vue */ "./src/js/components/card.vue");
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      count: 0
+    };
+  },
+  created: function created() {},
+  components: {
+    Cake: _cake_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Card: _card_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  computed: {},
+  watch: {},
+  methods: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-31451ae4\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/cake.vue":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"id":"data-v-31451ae4","scoped":true,"sourceMap":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/cake.vue ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
+// Module
+exports.push([module.i, "\n*[data-v-31451ae4]:before, *[data-v-31451ae4]:after {\n\tposition: absolute;\n\tcontent: \"\";\n}\n.dessert[data-v-31451ae4] {\n\tposition: absolute;\n}\n.dialog[data-v-31451ae4] {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 120px;\n\ttop: calc(45% - 170px);\n\tleft: 50%;\n}\n.hint[data-v-31451ae4] {\n\tposition: absolute;\n\theight: 50px;\n\twidth: 300px;\n\ttop: calc(50% + 130px);\n\tleft: calc(50% - 150px);\n\tborder: 0px !important;\n}\n.pudding[data-v-31451ae4] {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 150px;\n\ttop: 45%;\n\tleft: calc(50% - 75px);\n}\n.pudding__part[data-v-31451ae4] {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 120px;\n\tbackground: #f4d37c;\n\t-webkit-transform-origin: bottom; transform-origin: bottom;\n}\n.pudding__part[data-v-31451ae4]:before {\n\ttop: 0;\n\tright: -10px;\n\twidth: 0;\n\theight: 0;\n\tborder-left: 10px solid #f4d37c;\n\tborder-top: 120px solid transparent;\n\tborder-bottom: 0 solid transparent;\n}\n.pudding__part[data-v-31451ae4]:after {\n\ttop: 0;\n\tleft: -10px;\n\twidth: 0;\n\theight: 0;\n\tborder-right: 10px solid #f4d37c;\n\tborder-top: 120px solid transparent;\n\tborder-bottom: 0 solid transparent;\n}\n.pudding__cream[data-v-31451ae4] {\n\tposition: absolute;\n\ttop: -10px;\n\tleft: 50px;\n\twidth: 45px;\n\theight: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 50%;\n\t-webkit-transform: scale(1.5); transform: scale(1.5);\n\tz-index: 10;\n}\n.pudding__cream[data-v-31451ae4]:before {\n\ttop: -8px;\n\tleft: 7px;\n\twidth: 30px;\n\theight: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 50%;\n}\n.pudding__cream[data-v-31451ae4]:after {\n\ttop: -18px;\n\tleft: 15px;\n\theight: 25px;\n\twidth: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 80% 10% 55% 50%/55% 10% 80% 50%;\n\t-webkit-transform: rotate(-40deg); transform: rotate(-40deg);\n}\n.pudding__cherry[data-v-31451ae4] {\n\tposition: absolute;\n\ttop: -20px;\n\tleft: 88px;\n\twidth: 25px;\n\theight: 25px;\n\tz-index: 10;\n\tborder-radius: 50%;\n\tbackground: #eb3939;\n}\n.pudding__cherry[data-v-31451ae4]:before {\n\ttop: -8px;\n\tleft: 11px;\n\twidth: 12px;\n\theight: 17px;\n\tborder-radius: 50%;\n\t-webkit-transform: rotate(37deg); transform: rotate(37deg);\n\tborder-left: 2px solid #323232;\n\tbackground: transparent;\n}\n.pudding__head[data-v-31451ae4] {\n\tposition: absolute;\n\ttop: -18px;\n\twidth: 150px;\n\theight: 40px;\n\tborder-radius: 50%;\n\tbackground: #834c0e;\n}\n.pudding__bottom[data-v-31451ae4] {\n\tposition: absolute;\n\tbottom: -25px;\n\tleft: -10px;\n\twidth: 170px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tbackground: #f4d37c;\n}\n.pudding__eye[data-v-31451ae4] {\n\tposition: absolute;\n\twidth: 55px;\n\theight: 20px;\n\ttop: 40px;\n\tleft: 44px;\n}\n.pudding__eye[data-v-31451ae4]:before, .pudding__eye[data-v-31451ae4]:after {\n\tbackground: #323232;\n\tborder-radius: 50%;\n\twidth: 8px;\n\theight: 8px;\n}\n.pudding__eye[data-v-31451ae4]:before {\n\tleft: 0;\n\t-webkit-transform: rotate(225deg); transform: rotate(225deg);\n}\n.pudding__eye[data-v-31451ae4]:after {\n\tright: 0;\n\t-webkit-transform: rotate(45deg); transform: rotate(45deg);\n}\n.pudding__mouse[data-v-31451ae4] {\n\tposition: absolute;\n\twidth: 20px;\n\theight: 10px;\n\ttop: 60px;\n\tleft: 63px;\n\tborder-bottom: 2px solid #323232;\n\tborder-radius: 50%;\n\tbackground: transparent;\n}\n.pudding_clicked[data-v-31451ae4] {\n\tz-index: 10;\n}\n.pudding_clicked .pudding__part[data-v-31451ae4] {\n\t-webkit-animation: skew-data-v-31451ae4 2s infinite; animation: skew-data-v-31451ae4 2s infinite;\n}\n.pudding_clicked .pudding__eye[data-v-31451ae4]:before, .pudding_clicked .pudding__eye[data-v-31451ae4]:after {\n\tbackground: transparent;\n\tborder-radius: 0;\n\twidth: 5px;\n\theight: 5px;\n\tborder-left: 3px solid #323232;\n\tborder-bottom: 3px solid #323232;\n}\n.pudding_clicked .pudding__mouse[data-v-31451ae4]:before, .pudding_clicked .pudding__mouse[data-v-31451ae4]:after {\n\tbackground: #f5e3eb;\n\twidth: 20px;\n\theight: 20px;\n\tborder-radius: 50%;\n\ttop: -10px;\n}\n.pudding_clicked .pudding__mouse[data-v-31451ae4]:before {\n\tleft: -40px;\n}\n.pudding_clicked .pudding__mouse[data-v-31451ae4]:after {\n\tright: -40px;\n}\n@-webkit-keyframes skew-data-v-31451ae4 {\n0% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n5% {\n\t\t-webkit-transform: skewX(5deg); transform: skewX(5deg);\n}\n10% {\n\t\t-webkit-transform: skewX(-4deg); transform: skewX(-4deg);\n}\n15% {\n\t\t-webkit-transform: skewX(3deg); transform: skewX(3deg);\n}\n20% {\n\t\t-webkit-transform: skewX(-2deg); transform: skewX(-2deg);\n}\n25% {\n\t\t-webkit-transform: skewX(0.9deg); transform: skewX(0.9deg);\n}\n30% {\n\t\t-webkit-transform: skewX(-0.6deg); transform: skewX(-0.6deg);\n}\n35% {\n\t\t-webkit-transform: skewX(0.3deg); transform: skewX(0.3deg);\n}\n40% {\n\t\t-webkit-transform: skewX(-0.2deg); transform: skewX(-0.2deg);\n}\n45% {\n\t\t-webkit-transform: skewX(0.1deg); transform: skewX(0.1deg);\n}\n50% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n}\n@keyframes skew-data-v-31451ae4 {\n0% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n5% {\n\t\t-webkit-transform: skewX(5deg); transform: skewX(5deg);\n}\n10% {\n\t\t-webkit-transform: skewX(-4deg); transform: skewX(-4deg);\n}\n15% {\n\t\t-webkit-transform: skewX(3deg); transform: skewX(3deg);\n}\n20% {\n\t\t-webkit-transform: skewX(-2deg); transform: skewX(-2deg);\n}\n25% {\n\t\t-webkit-transform: skewX(0.9deg); transform: skewX(0.9deg);\n}\n30% {\n\t\t-webkit-transform: skewX(-0.6deg); transform: skewX(-0.6deg);\n}\n35% {\n\t\t-webkit-transform: skewX(0.3deg); transform: skewX(0.3deg);\n}\n40% {\n\t\t-webkit-transform: skewX(-0.2deg); transform: skewX(-0.2deg);\n}\n45% {\n\t\t-webkit-transform: skewX(0.1deg); transform: skewX(0.1deg);\n}\n50% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n}\n.pudding__sara[data-v-31451ae4] {\n\tposition: absolute;\n\tbottom: -8px;\n\tleft: -35px;\n\twidth: 220px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tz-index: -1;\n\tbackground: #d4d2d2;\n\toverflow: hidden;\n}\n.pudding__sara[data-v-31451ae4]:before {\n\tbottom: 4px;\n\tleft: -7px;\n\twidth: 220px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tbackground: #fff;\n}\n\n", "",{"version":3,"sources":["src/js/components/cake.vue","cake.vue"],"names":[],"mappings":"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","file":"cake.vue","sourcesContent":["<template>\n    <div>\n        <div v-for=\"(image, index) in images\" :key=\"index\">\n            <img :src=\"'https://github.com/wubi0116/wubi0116.github.io/blob/master/images/' + image + '.png?raw=true'\" class=\"dialog\" style=\"opacity: 0;\" @click=\"set_dialog_index()\">\n        </div>\n\n        <div class=\"pudding\" @click=\"set_pudding_shake()\">\n            <div class=\"pudding__part\">\n                <div class=\"pudding__head\"></div>\n                <div class=\"pudding__eye\"></div>\n                <div class=\"pudding__mouse\"></div>\n                <div class=\"pudding__cream\"></div>\n                <div class=\"pudding__cherry\"></div>\n                <div class=\"pudding__bottom\"></div>\n            </div>\n\n            <div class=\"pudding__sara\"></div>\n        </div>\n        \n        <v-alert :value=\"true\" color=\"info\" icon=\"check_circle\" outline class=\"hint\">\n            點點看布丁，會有意想不到的驚喜 :)\n        </v-alert>\n    </div>\n</template>\n\n\n<script>\nexport default {\n\tdata: function() {\n\t\treturn {\n            pudding_shake: false,\n            count: 0,\n            images: ['click-me', 'hbd'],\n\t\t}\n\t},\n\n\tcreated: function() {\n\n\t},\n\t\n\tcomponents: {\n\t},\n\t\n\tcomputed: {\n\t\t\n\t},\n\t\n\twatch: {\n\n\t},\n\n\tmethods: {\n        set_dialog_index: function() {\n            let dialogs = document.getElementsByClassName(\"dialog\");\n            for(let i=0;i<dialogs.length;i++) {\n                let dialog = dialogs[i];\n                dialog.style = 'opacity: 0;';\n            }\n            \n            let dialog = document.getElementsByClassName(\"dialog\")[this.count];\n            dialog.style = 'opacity: 1;';\n\n            this.count += 1;\n        },\n\n\t\tset_pudding_shake: function() {\n\t\t\tthis.pudding_shake = !this.pudding_shake;\n\t\t\t\n\t\t\tlet pudding = document.getElementsByClassName(\"pudding\")[0];\n\t\t\tif(this.pudding_shake) {\n\t\t\t\tpudding.classList.add(\"pudding_clicked\");\n\t\t\t}\n\t\t\telse {\n\t\t\t\tpudding.classList.remove(\"pudding_clicked\");\n\t\t\t}\n\t\t}\n\t}\n  }\n</script>\n\n\n<style scoped>\n\n*:before, *:after {\n\tposition: absolute;\n\tcontent: \"\";\n}\n\n.dessert {\n\tposition: absolute;\n}\n\n.dialog {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 120px;\n\ttop: calc(45% - 170px);\n\tleft: 50%;\n}\n\n.hint {\n\tposition: absolute;\n\theight: 50px;\n\twidth: 300px;\n\ttop: calc(50% + 130px);\n\tleft: calc(50% - 150px);\n\tborder: 0px !important;\n}\n\n.pudding {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 150px;\n\ttop: 45%;\n\tleft: calc(50% - 75px);\n}\n.pudding__part {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 120px;\n\tbackground: #f4d37c;\n\t-webkit-transform-origin: bottom; transform-origin: bottom;\n}\n.pudding__part:before {\n\ttop: 0;\n\tright: -10px;\n\twidth: 0;\n\theight: 0;\n\tborder-left: 10px solid #f4d37c;\n\tborder-top: 120px solid transparent;\n\tborder-bottom: 0 solid transparent;\n}\n.pudding__part:after {\n\ttop: 0;\n\tleft: -10px;\n\twidth: 0;\n\theight: 0;\n\tborder-right: 10px solid #f4d37c;\n\tborder-top: 120px solid transparent;\n\tborder-bottom: 0 solid transparent;\n}\n.pudding__cream {\n\tposition: absolute;\n\ttop: -10px;\n\tleft: 50px;\n\twidth: 45px;\n\theight: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 50%;\n\t-webkit-transform: scale(1.5); transform: scale(1.5);\n\tz-index: 10;\n}\n.pudding__cream:before {\n\ttop: -8px;\n\tleft: 7px;\n\twidth: 30px;\n\theight: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 50%;\n}\n.pudding__cream:after {\n\ttop: -18px;\n\tleft: 15px;\n\theight: 25px;\n\twidth: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 80% 10% 55% 50%/55% 10% 80% 50%;\n\t-webkit-transform: rotate(-40deg); transform: rotate(-40deg);\n}\n.pudding__cherry {\n\tposition: absolute;\n\ttop: -20px;\n\tleft: 88px;\n\twidth: 25px;\n\theight: 25px;\n\tz-index: 10;\n\tborder-radius: 50%;\n\tbackground: #eb3939;\n}\n.pudding__cherry:before {\n\ttop: -8px;\n\tleft: 11px;\n\twidth: 12px;\n\theight: 17px;\n\tborder-radius: 50%;\n\t-webkit-transform: rotate(37deg); transform: rotate(37deg);\n\tborder-left: 2px solid #323232;\n\tbackground: transparent;\n}\n.pudding__head {\n\tposition: absolute;\n\ttop: -18px;\n\twidth: 150px;\n\theight: 40px;\n\tborder-radius: 50%;\n\tbackground: #834c0e;\n}\n.pudding__bottom {\n\tposition: absolute;\n\tbottom: -25px;\n\tleft: -10px;\n\twidth: 170px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tbackground: #f4d37c;\n}\n.pudding__eye {\n\tposition: absolute;\n\twidth: 55px;\n\theight: 20px;\n\ttop: 40px;\n\tleft: 44px;\n}\n.pudding__eye:before, .pudding__eye:after {\n\tbackground: #323232;\n\tborder-radius: 50%;\n\twidth: 8px;\n\theight: 8px;\n}\n.pudding__eye:before {\n\tleft: 0;\n\t-webkit-transform: rotate(225deg); transform: rotate(225deg);\n}\n.pudding__eye:after {\n\tright: 0;\n\t-webkit-transform: rotate(45deg); transform: rotate(45deg);\n}\n.pudding__mouse {\n\tposition: absolute;\n\twidth: 20px;\n\theight: 10px;\n\ttop: 60px;\n\tleft: 63px;\n\tborder-bottom: 2px solid #323232;\n\tborder-radius: 50%;\n\tbackground: transparent;\n}\n\n.pudding_clicked {\n\tz-index: 10;\n}\n\n.pudding_clicked .pudding__part {\n\t-webkit-animation: skew 2s infinite; animation: skew 2s infinite;\n}\n.pudding_clicked .pudding__eye:before, .pudding_clicked .pudding__eye:after {\n\tbackground: transparent;\n\tborder-radius: 0;\n\twidth: 5px;\n\theight: 5px;\n\tborder-left: 3px solid #323232;\n\tborder-bottom: 3px solid #323232;\n}\n.pudding_clicked .pudding__mouse:before, .pudding_clicked .pudding__mouse:after {\n\tbackground: #f5e3eb;\n\twidth: 20px;\n\theight: 20px;\n\tborder-radius: 50%;\n\ttop: -10px;\n}\n.pudding_clicked .pudding__mouse:before {\n\tleft: -40px;\n}\n.pudding_clicked .pudding__mouse:after {\n\tright: -40px;\n}\n\n@-webkit-keyframes skew {\n\t0% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n\t}\n\t5% {\n\t\t-webkit-transform: skewX(5deg); transform: skewX(5deg);\n\t}\n\t10% {\n\t\t-webkit-transform: skewX(-4deg); transform: skewX(-4deg);\n\t}\n\t15% {\n\t\t-webkit-transform: skewX(3deg); transform: skewX(3deg);\n\t}\n\t20% {\n\t\t-webkit-transform: skewX(-2deg); transform: skewX(-2deg);\n\t}\n\t25% {\n\t\t-webkit-transform: skewX(0.9deg); transform: skewX(0.9deg);\n\t}\n\t30% {\n\t\t-webkit-transform: skewX(-0.6deg); transform: skewX(-0.6deg);\n\t}\n\t35% {\n\t\t-webkit-transform: skewX(0.3deg); transform: skewX(0.3deg);\n\t}\n\t40% {\n\t\t-webkit-transform: skewX(-0.2deg); transform: skewX(-0.2deg);\n\t}\n\t45% {\n\t\t-webkit-transform: skewX(0.1deg); transform: skewX(0.1deg);\n\t}\n\t50% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n\t}\n}\n\n@keyframes skew {\n\t0% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n\t}\n\t5% {\n\t\t-webkit-transform: skewX(5deg); transform: skewX(5deg);\n\t}\n\t10% {\n\t\t-webkit-transform: skewX(-4deg); transform: skewX(-4deg);\n\t}\n\t15% {\n\t\t-webkit-transform: skewX(3deg); transform: skewX(3deg);\n\t}\n\t20% {\n\t\t-webkit-transform: skewX(-2deg); transform: skewX(-2deg);\n\t}\n\t25% {\n\t\t-webkit-transform: skewX(0.9deg); transform: skewX(0.9deg);\n\t}\n\t30% {\n\t\t-webkit-transform: skewX(-0.6deg); transform: skewX(-0.6deg);\n\t}\n\t35% {\n\t\t-webkit-transform: skewX(0.3deg); transform: skewX(0.3deg);\n\t}\n\t40% {\n\t\t-webkit-transform: skewX(-0.2deg); transform: skewX(-0.2deg);\n\t}\n\t45% {\n\t\t-webkit-transform: skewX(0.1deg); transform: skewX(0.1deg);\n\t}\n\t50% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n\t}\n}\n\n.pudding__sara {\n\tposition: absolute;\n\tbottom: -8px;\n\tleft: -35px;\n\twidth: 220px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tz-index: -1;\n\tbackground: #d4d2d2;\n\toverflow: hidden;\n}\n.pudding__sara:before {\n\tbottom: 4px;\n\tleft: -7px;\n\twidth: 220px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tbackground: #fff;\n}\n\n</style>","\n*[data-v-31451ae4]:before, *[data-v-31451ae4]:after {\n\tposition: absolute;\n\tcontent: \"\";\n}\n.dessert[data-v-31451ae4] {\n\tposition: absolute;\n}\n.dialog[data-v-31451ae4] {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 120px;\n\ttop: calc(45% - 170px);\n\tleft: 50%;\n}\n.hint[data-v-31451ae4] {\n\tposition: absolute;\n\theight: 50px;\n\twidth: 300px;\n\ttop: calc(50% + 130px);\n\tleft: calc(50% - 150px);\n\tborder: 0px !important;\n}\n.pudding[data-v-31451ae4] {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 150px;\n\ttop: 45%;\n\tleft: calc(50% - 75px);\n}\n.pudding__part[data-v-31451ae4] {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 120px;\n\tbackground: #f4d37c;\n\t-webkit-transform-origin: bottom; transform-origin: bottom;\n}\n.pudding__part[data-v-31451ae4]:before {\n\ttop: 0;\n\tright: -10px;\n\twidth: 0;\n\theight: 0;\n\tborder-left: 10px solid #f4d37c;\n\tborder-top: 120px solid transparent;\n\tborder-bottom: 0 solid transparent;\n}\n.pudding__part[data-v-31451ae4]:after {\n\ttop: 0;\n\tleft: -10px;\n\twidth: 0;\n\theight: 0;\n\tborder-right: 10px solid #f4d37c;\n\tborder-top: 120px solid transparent;\n\tborder-bottom: 0 solid transparent;\n}\n.pudding__cream[data-v-31451ae4] {\n\tposition: absolute;\n\ttop: -10px;\n\tleft: 50px;\n\twidth: 45px;\n\theight: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 50%;\n\t-webkit-transform: scale(1.5); transform: scale(1.5);\n\tz-index: 10;\n}\n.pudding__cream[data-v-31451ae4]:before {\n\ttop: -8px;\n\tleft: 7px;\n\twidth: 30px;\n\theight: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 50%;\n}\n.pudding__cream[data-v-31451ae4]:after {\n\ttop: -18px;\n\tleft: 15px;\n\theight: 25px;\n\twidth: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 80% 10% 55% 50%/55% 10% 80% 50%;\n\t-webkit-transform: rotate(-40deg); transform: rotate(-40deg);\n}\n.pudding__cherry[data-v-31451ae4] {\n\tposition: absolute;\n\ttop: -20px;\n\tleft: 88px;\n\twidth: 25px;\n\theight: 25px;\n\tz-index: 10;\n\tborder-radius: 50%;\n\tbackground: #eb3939;\n}\n.pudding__cherry[data-v-31451ae4]:before {\n\ttop: -8px;\n\tleft: 11px;\n\twidth: 12px;\n\theight: 17px;\n\tborder-radius: 50%;\n\t-webkit-transform: rotate(37deg); transform: rotate(37deg);\n\tborder-left: 2px solid #323232;\n\tbackground: transparent;\n}\n.pudding__head[data-v-31451ae4] {\n\tposition: absolute;\n\ttop: -18px;\n\twidth: 150px;\n\theight: 40px;\n\tborder-radius: 50%;\n\tbackground: #834c0e;\n}\n.pudding__bottom[data-v-31451ae4] {\n\tposition: absolute;\n\tbottom: -25px;\n\tleft: -10px;\n\twidth: 170px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tbackground: #f4d37c;\n}\n.pudding__eye[data-v-31451ae4] {\n\tposition: absolute;\n\twidth: 55px;\n\theight: 20px;\n\ttop: 40px;\n\tleft: 44px;\n}\n.pudding__eye[data-v-31451ae4]:before, .pudding__eye[data-v-31451ae4]:after {\n\tbackground: #323232;\n\tborder-radius: 50%;\n\twidth: 8px;\n\theight: 8px;\n}\n.pudding__eye[data-v-31451ae4]:before {\n\tleft: 0;\n\t-webkit-transform: rotate(225deg); transform: rotate(225deg);\n}\n.pudding__eye[data-v-31451ae4]:after {\n\tright: 0;\n\t-webkit-transform: rotate(45deg); transform: rotate(45deg);\n}\n.pudding__mouse[data-v-31451ae4] {\n\tposition: absolute;\n\twidth: 20px;\n\theight: 10px;\n\ttop: 60px;\n\tleft: 63px;\n\tborder-bottom: 2px solid #323232;\n\tborder-radius: 50%;\n\tbackground: transparent;\n}\n.pudding_clicked[data-v-31451ae4] {\n\tz-index: 10;\n}\n.pudding_clicked .pudding__part[data-v-31451ae4] {\n\t-webkit-animation: skew-data-v-31451ae4 2s infinite; animation: skew-data-v-31451ae4 2s infinite;\n}\n.pudding_clicked .pudding__eye[data-v-31451ae4]:before, .pudding_clicked .pudding__eye[data-v-31451ae4]:after {\n\tbackground: transparent;\n\tborder-radius: 0;\n\twidth: 5px;\n\theight: 5px;\n\tborder-left: 3px solid #323232;\n\tborder-bottom: 3px solid #323232;\n}\n.pudding_clicked .pudding__mouse[data-v-31451ae4]:before, .pudding_clicked .pudding__mouse[data-v-31451ae4]:after {\n\tbackground: #f5e3eb;\n\twidth: 20px;\n\theight: 20px;\n\tborder-radius: 50%;\n\ttop: -10px;\n}\n.pudding_clicked .pudding__mouse[data-v-31451ae4]:before {\n\tleft: -40px;\n}\n.pudding_clicked .pudding__mouse[data-v-31451ae4]:after {\n\tright: -40px;\n}\n@-webkit-keyframes skew-data-v-31451ae4 {\n0% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n5% {\n\t\t-webkit-transform: skewX(5deg); transform: skewX(5deg);\n}\n10% {\n\t\t-webkit-transform: skewX(-4deg); transform: skewX(-4deg);\n}\n15% {\n\t\t-webkit-transform: skewX(3deg); transform: skewX(3deg);\n}\n20% {\n\t\t-webkit-transform: skewX(-2deg); transform: skewX(-2deg);\n}\n25% {\n\t\t-webkit-transform: skewX(0.9deg); transform: skewX(0.9deg);\n}\n30% {\n\t\t-webkit-transform: skewX(-0.6deg); transform: skewX(-0.6deg);\n}\n35% {\n\t\t-webkit-transform: skewX(0.3deg); transform: skewX(0.3deg);\n}\n40% {\n\t\t-webkit-transform: skewX(-0.2deg); transform: skewX(-0.2deg);\n}\n45% {\n\t\t-webkit-transform: skewX(0.1deg); transform: skewX(0.1deg);\n}\n50% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n}\n@keyframes skew-data-v-31451ae4 {\n0% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n5% {\n\t\t-webkit-transform: skewX(5deg); transform: skewX(5deg);\n}\n10% {\n\t\t-webkit-transform: skewX(-4deg); transform: skewX(-4deg);\n}\n15% {\n\t\t-webkit-transform: skewX(3deg); transform: skewX(3deg);\n}\n20% {\n\t\t-webkit-transform: skewX(-2deg); transform: skewX(-2deg);\n}\n25% {\n\t\t-webkit-transform: skewX(0.9deg); transform: skewX(0.9deg);\n}\n30% {\n\t\t-webkit-transform: skewX(-0.6deg); transform: skewX(-0.6deg);\n}\n35% {\n\t\t-webkit-transform: skewX(0.3deg); transform: skewX(0.3deg);\n}\n40% {\n\t\t-webkit-transform: skewX(-0.2deg); transform: skewX(-0.2deg);\n}\n45% {\n\t\t-webkit-transform: skewX(0.1deg); transform: skewX(0.1deg);\n}\n50% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n}\n.pudding__sara[data-v-31451ae4] {\n\tposition: absolute;\n\tbottom: -8px;\n\tleft: -35px;\n\twidth: 220px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tz-index: -1;\n\tbackground: #d4d2d2;\n\toverflow: hidden;\n}\n.pudding__sara[data-v-31451ae4]:before {\n\tbottom: 4px;\n\tleft: -7px;\n\twidth: 220px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tbackground: #fff;\n}\n\n"]}]);
+
+
 
 /***/ }),
 
@@ -960,7 +1054,22 @@ __webpack_require__.r(__webpack_exports__);
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, "\n*[data-v-3d25fde5]:before, *[data-v-3d25fde5]:after {\n\tposition: absolute;\n\tcontent: \"\";\n}\nbody[data-v-3d25fde5] {\n\twidth: 100%;\n\theight: 100%;\n\tbackground-color: #f8dee9;\n\tz-index: 10;\n}\n.dessert[data-v-3d25fde5] {\n\tposition: absolute;\n}\n.dialog[data-v-3d25fde5] {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 120px;\n\ttop: calc(45% - 170px);\n\tleft: 50%;\n}\n.hint[data-v-3d25fde5] {\n\tposition: absolute;\n\theight: 50px;\n\twidth: 300px;\n\ttop: calc(50% + 130px);\n\tleft: calc(50% - 150px);\n\tborder: 0px !important;\n}\n.pudding[data-v-3d25fde5] {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 150px;\n\ttop: 45%;\n\tleft: calc(50% - 75px);\n}\n.pudding__part[data-v-3d25fde5] {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 120px;\n\tbackground: #f4d37c;\n\t-webkit-transform-origin: bottom; transform-origin: bottom;\n}\n.pudding__part[data-v-3d25fde5]:before {\n\ttop: 0;\n\tright: -10px;\n\twidth: 0;\n\theight: 0;\n\tborder-left: 10px solid #f4d37c;\n\tborder-top: 120px solid transparent;\n\tborder-bottom: 0 solid transparent;\n}\n.pudding__part[data-v-3d25fde5]:after {\n\ttop: 0;\n\tleft: -10px;\n\twidth: 0;\n\theight: 0;\n\tborder-right: 10px solid #f4d37c;\n\tborder-top: 120px solid transparent;\n\tborder-bottom: 0 solid transparent;\n}\n.pudding__cream[data-v-3d25fde5] {\n\tposition: absolute;\n\ttop: -10px;\n\tleft: 50px;\n\twidth: 45px;\n\theight: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 50%;\n\t-webkit-transform: scale(1.5); transform: scale(1.5);\n\tz-index: 10;\n}\n.pudding__cream[data-v-3d25fde5]:before {\n\ttop: -8px;\n\tleft: 7px;\n\twidth: 30px;\n\theight: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 50%;\n}\n.pudding__cream[data-v-3d25fde5]:after {\n\ttop: -18px;\n\tleft: 15px;\n\theight: 25px;\n\twidth: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 80% 10% 55% 50%/55% 10% 80% 50%;\n\t-webkit-transform: rotate(-40deg); transform: rotate(-40deg);\n}\n.pudding__cherry[data-v-3d25fde5] {\n\tposition: absolute;\n\ttop: -20px;\n\tleft: 88px;\n\twidth: 25px;\n\theight: 25px;\n\tz-index: 10;\n\tborder-radius: 50%;\n\tbackground: #eb3939;\n}\n.pudding__cherry[data-v-3d25fde5]:before {\n\ttop: -8px;\n\tleft: 11px;\n\twidth: 12px;\n\theight: 17px;\n\tborder-radius: 50%;\n\t-webkit-transform: rotate(37deg); transform: rotate(37deg);\n\tborder-left: 2px solid #323232;\n\tbackground: transparent;\n}\n.pudding__head[data-v-3d25fde5] {\n\tposition: absolute;\n\ttop: -18px;\n\twidth: 150px;\n\theight: 40px;\n\tborder-radius: 50%;\n\tbackground: #834c0e;\n}\n.pudding__bottom[data-v-3d25fde5] {\n\tposition: absolute;\n\tbottom: -25px;\n\tleft: -10px;\n\twidth: 170px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tbackground: #f4d37c;\n}\n.pudding__eye[data-v-3d25fde5] {\n\tposition: absolute;\n\twidth: 55px;\n\theight: 20px;\n\ttop: 40px;\n\tleft: 44px;\n}\n.pudding__eye[data-v-3d25fde5]:before, .pudding__eye[data-v-3d25fde5]:after {\n\tbackground: #323232;\n\tborder-radius: 50%;\n\twidth: 8px;\n\theight: 8px;\n}\n.pudding__eye[data-v-3d25fde5]:before {\n\tleft: 0;\n\t-webkit-transform: rotate(225deg); transform: rotate(225deg);\n}\n.pudding__eye[data-v-3d25fde5]:after {\n\tright: 0;\n\t-webkit-transform: rotate(45deg); transform: rotate(45deg);\n}\n.pudding__mouse[data-v-3d25fde5] {\n\tposition: absolute;\n\twidth: 20px;\n\theight: 10px;\n\ttop: 60px;\n\tleft: 63px;\n\tborder-bottom: 2px solid #323232;\n\tborder-radius: 50%;\n\tbackground: transparent;\n}\n.pudding_clicked[data-v-3d25fde5] {\n\tz-index: 10;\n}\n.pudding_clicked .pudding__part[data-v-3d25fde5] {\n\t-webkit-animation: skew-data-v-3d25fde5 2s infinite; animation: skew-data-v-3d25fde5 2s infinite;\n}\n.pudding_clicked .pudding__eye[data-v-3d25fde5]:before, .pudding_clicked .pudding__eye[data-v-3d25fde5]:after {\n\tbackground: transparent;\n\tborder-radius: 0;\n\twidth: 5px;\n\theight: 5px;\n\tborder-left: 3px solid #323232;\n\tborder-bottom: 3px solid #323232;\n}\n.pudding_clicked .pudding__mouse[data-v-3d25fde5]:before, .pudding_clicked .pudding__mouse[data-v-3d25fde5]:after {\n\tbackground: #f5e3eb;\n\twidth: 20px;\n\theight: 20px;\n\tborder-radius: 50%;\n\ttop: -10px;\n}\n.pudding_clicked .pudding__mouse[data-v-3d25fde5]:before {\n\tleft: -40px;\n}\n.pudding_clicked .pudding__mouse[data-v-3d25fde5]:after {\n\tright: -40px;\n}\n@-webkit-keyframes skew-data-v-3d25fde5 {\n0% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n5% {\n\t\t-webkit-transform: skewX(5deg); transform: skewX(5deg);\n}\n10% {\n\t\t-webkit-transform: skewX(-4deg); transform: skewX(-4deg);\n}\n15% {\n\t\t-webkit-transform: skewX(3deg); transform: skewX(3deg);\n}\n20% {\n\t\t-webkit-transform: skewX(-2deg); transform: skewX(-2deg);\n}\n25% {\n\t\t-webkit-transform: skewX(0.9deg); transform: skewX(0.9deg);\n}\n30% {\n\t\t-webkit-transform: skewX(-0.6deg); transform: skewX(-0.6deg);\n}\n35% {\n\t\t-webkit-transform: skewX(0.3deg); transform: skewX(0.3deg);\n}\n40% {\n\t\t-webkit-transform: skewX(-0.2deg); transform: skewX(-0.2deg);\n}\n45% {\n\t\t-webkit-transform: skewX(0.1deg); transform: skewX(0.1deg);\n}\n50% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n}\n@keyframes skew-data-v-3d25fde5 {\n0% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n5% {\n\t\t-webkit-transform: skewX(5deg); transform: skewX(5deg);\n}\n10% {\n\t\t-webkit-transform: skewX(-4deg); transform: skewX(-4deg);\n}\n15% {\n\t\t-webkit-transform: skewX(3deg); transform: skewX(3deg);\n}\n20% {\n\t\t-webkit-transform: skewX(-2deg); transform: skewX(-2deg);\n}\n25% {\n\t\t-webkit-transform: skewX(0.9deg); transform: skewX(0.9deg);\n}\n30% {\n\t\t-webkit-transform: skewX(-0.6deg); transform: skewX(-0.6deg);\n}\n35% {\n\t\t-webkit-transform: skewX(0.3deg); transform: skewX(0.3deg);\n}\n40% {\n\t\t-webkit-transform: skewX(-0.2deg); transform: skewX(-0.2deg);\n}\n45% {\n\t\t-webkit-transform: skewX(0.1deg); transform: skewX(0.1deg);\n}\n50% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n}\n.pudding__sara[data-v-3d25fde5] {\n\tposition: absolute;\n\tbottom: -8px;\n\tleft: -35px;\n\twidth: 220px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tz-index: -1;\n\tbackground: #d4d2d2;\n\toverflow: hidden;\n}\n.pudding__sara[data-v-3d25fde5]:before {\n\tbottom: 4px;\n\tleft: -7px;\n\twidth: 220px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tbackground: #fff;\n}\n\n", "",{"version":3,"sources":["src/js/components/main.vue","main.vue"],"names":[],"mappings":"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","file":"main.vue","sourcesContent":["<template>\n\t<body>\n\t\t<img src=\"https://github.com/wubi0116/wubi0116.github.io/blob/master/images/dialog.png?raw=true\" class=\"dialog\" style=\"opacity: 0\">\n\n\t\t<div class=\"pudding\" @click=\"set_pudding_shake()\">\n\t\t\t<div class=\"pudding__part\">\n\t\t\t\t<div class=\"pudding__head\"></div>\n\t\t\t\t<div class=\"pudding__eye\"></div>\n\t\t\t\t<div class=\"pudding__mouse\"></div>\n\t\t\t\t<div class=\"pudding__cream\"></div>\n\t\t\t\t<div class=\"pudding__cherry\"></div>\n\t\t\t\t<div class=\"pudding__bottom\"></div>\n\t\t\t</div>\n\n\t\t\t<div class=\"pudding__sara\"></div>\n\t\t</div>\n\t\t\n\t\t<v-alert :value=\"true\" color=\"info\" icon=\"check_circle\" outline class=\"hint\">\n\t\t\t點點看布丁，會有意想不到的驚喜 :)\n\t\t</v-alert>\n\t</body>\n</template>\n\n<script>\nexport default {\n\tdata: function() {\n\t\treturn {\n\t\t\tpudding_shake: false\n\t\t}\n\t},\n\n\tcreated: function() {\n\n\t},\n\t\n\tcomponents: {\n\t\t\n\t},\n\t\n\tcomputed: {\n\t\t\n\t},\n\t\n\twatch: {\n\n\t},\n\n\tmethods: {\n\t\tset_pudding_shake: function() {\n\t\t\tthis.pudding_shake = !this.pudding_shake;\n\t\t\t\n\t\t\tlet pudding = document.getElementsByClassName(\"pudding\")[0];\n\t\t\tlet dialog = document.getElementsByClassName(\"dialog\")[0];\n\t\t\tif(this.pudding_shake) {\n\t\t\t\tpudding.classList.add(\"pudding_clicked\");\n\t\t\t\tdialog.style = \"opacity: 1\";\n\t\t\t}\n\t\t\telse {\n\t\t\t\tpudding.classList.remove(\"pudding_clicked\");\n\t\t\t\tdialog.style = \"opacity: 0\";\n\t\t\t}\n\t\t}\n\t}\n  }\n</script>\n\n<style scoped>\n\n*:before, *:after {\n\tposition: absolute;\n\tcontent: \"\";\n}\n\nbody {\n\twidth: 100%;\n\theight: 100%;\n\tbackground-color: #f8dee9;\n\tz-index: 10;\n}\n\n.dessert {\n\tposition: absolute;\n}\n\n.dialog {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 120px;\n\ttop: calc(45% - 170px);\n\tleft: 50%;\n}\n\n.hint {\n\tposition: absolute;\n\theight: 50px;\n\twidth: 300px;\n\ttop: calc(50% + 130px);\n\tleft: calc(50% - 150px);\n\tborder: 0px !important;\n}\n\n.pudding {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 150px;\n\ttop: 45%;\n\tleft: calc(50% - 75px);\n}\n.pudding__part {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 120px;\n\tbackground: #f4d37c;\n\t-webkit-transform-origin: bottom; transform-origin: bottom;\n}\n.pudding__part:before {\n\ttop: 0;\n\tright: -10px;\n\twidth: 0;\n\theight: 0;\n\tborder-left: 10px solid #f4d37c;\n\tborder-top: 120px solid transparent;\n\tborder-bottom: 0 solid transparent;\n}\n.pudding__part:after {\n\ttop: 0;\n\tleft: -10px;\n\twidth: 0;\n\theight: 0;\n\tborder-right: 10px solid #f4d37c;\n\tborder-top: 120px solid transparent;\n\tborder-bottom: 0 solid transparent;\n}\n.pudding__cream {\n\tposition: absolute;\n\ttop: -10px;\n\tleft: 50px;\n\twidth: 45px;\n\theight: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 50%;\n\t-webkit-transform: scale(1.5); transform: scale(1.5);\n\tz-index: 10;\n}\n.pudding__cream:before {\n\ttop: -8px;\n\tleft: 7px;\n\twidth: 30px;\n\theight: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 50%;\n}\n.pudding__cream:after {\n\ttop: -18px;\n\tleft: 15px;\n\theight: 25px;\n\twidth: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 80% 10% 55% 50%/55% 10% 80% 50%;\n\t-webkit-transform: rotate(-40deg); transform: rotate(-40deg);\n}\n.pudding__cherry {\n\tposition: absolute;\n\ttop: -20px;\n\tleft: 88px;\n\twidth: 25px;\n\theight: 25px;\n\tz-index: 10;\n\tborder-radius: 50%;\n\tbackground: #eb3939;\n}\n.pudding__cherry:before {\n\ttop: -8px;\n\tleft: 11px;\n\twidth: 12px;\n\theight: 17px;\n\tborder-radius: 50%;\n\t-webkit-transform: rotate(37deg); transform: rotate(37deg);\n\tborder-left: 2px solid #323232;\n\tbackground: transparent;\n}\n.pudding__head {\n\tposition: absolute;\n\ttop: -18px;\n\twidth: 150px;\n\theight: 40px;\n\tborder-radius: 50%;\n\tbackground: #834c0e;\n}\n.pudding__bottom {\n\tposition: absolute;\n\tbottom: -25px;\n\tleft: -10px;\n\twidth: 170px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tbackground: #f4d37c;\n}\n.pudding__eye {\n\tposition: absolute;\n\twidth: 55px;\n\theight: 20px;\n\ttop: 40px;\n\tleft: 44px;\n}\n.pudding__eye:before, .pudding__eye:after {\n\tbackground: #323232;\n\tborder-radius: 50%;\n\twidth: 8px;\n\theight: 8px;\n}\n.pudding__eye:before {\n\tleft: 0;\n\t-webkit-transform: rotate(225deg); transform: rotate(225deg);\n}\n.pudding__eye:after {\n\tright: 0;\n\t-webkit-transform: rotate(45deg); transform: rotate(45deg);\n}\n.pudding__mouse {\n\tposition: absolute;\n\twidth: 20px;\n\theight: 10px;\n\ttop: 60px;\n\tleft: 63px;\n\tborder-bottom: 2px solid #323232;\n\tborder-radius: 50%;\n\tbackground: transparent;\n}\n\n.pudding_clicked {\n\tz-index: 10;\n}\n\n.pudding_clicked .pudding__part {\n\t-webkit-animation: skew 2s infinite; animation: skew 2s infinite;\n}\n.pudding_clicked .pudding__eye:before, .pudding_clicked .pudding__eye:after {\n\tbackground: transparent;\n\tborder-radius: 0;\n\twidth: 5px;\n\theight: 5px;\n\tborder-left: 3px solid #323232;\n\tborder-bottom: 3px solid #323232;\n}\n.pudding_clicked .pudding__mouse:before, .pudding_clicked .pudding__mouse:after {\n\tbackground: #f5e3eb;\n\twidth: 20px;\n\theight: 20px;\n\tborder-radius: 50%;\n\ttop: -10px;\n}\n.pudding_clicked .pudding__mouse:before {\n\tleft: -40px;\n}\n.pudding_clicked .pudding__mouse:after {\n\tright: -40px;\n}\n\n@-webkit-keyframes skew {\n\t0% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n\t}\n\t5% {\n\t\t-webkit-transform: skewX(5deg); transform: skewX(5deg);\n\t}\n\t10% {\n\t\t-webkit-transform: skewX(-4deg); transform: skewX(-4deg);\n\t}\n\t15% {\n\t\t-webkit-transform: skewX(3deg); transform: skewX(3deg);\n\t}\n\t20% {\n\t\t-webkit-transform: skewX(-2deg); transform: skewX(-2deg);\n\t}\n\t25% {\n\t\t-webkit-transform: skewX(0.9deg); transform: skewX(0.9deg);\n\t}\n\t30% {\n\t\t-webkit-transform: skewX(-0.6deg); transform: skewX(-0.6deg);\n\t}\n\t35% {\n\t\t-webkit-transform: skewX(0.3deg); transform: skewX(0.3deg);\n\t}\n\t40% {\n\t\t-webkit-transform: skewX(-0.2deg); transform: skewX(-0.2deg);\n\t}\n\t45% {\n\t\t-webkit-transform: skewX(0.1deg); transform: skewX(0.1deg);\n\t}\n\t50% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n\t}\n}\n\n@keyframes skew {\n\t0% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n\t}\n\t5% {\n\t\t-webkit-transform: skewX(5deg); transform: skewX(5deg);\n\t}\n\t10% {\n\t\t-webkit-transform: skewX(-4deg); transform: skewX(-4deg);\n\t}\n\t15% {\n\t\t-webkit-transform: skewX(3deg); transform: skewX(3deg);\n\t}\n\t20% {\n\t\t-webkit-transform: skewX(-2deg); transform: skewX(-2deg);\n\t}\n\t25% {\n\t\t-webkit-transform: skewX(0.9deg); transform: skewX(0.9deg);\n\t}\n\t30% {\n\t\t-webkit-transform: skewX(-0.6deg); transform: skewX(-0.6deg);\n\t}\n\t35% {\n\t\t-webkit-transform: skewX(0.3deg); transform: skewX(0.3deg);\n\t}\n\t40% {\n\t\t-webkit-transform: skewX(-0.2deg); transform: skewX(-0.2deg);\n\t}\n\t45% {\n\t\t-webkit-transform: skewX(0.1deg); transform: skewX(0.1deg);\n\t}\n\t50% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n\t}\n}\n\n.pudding__sara {\n\tposition: absolute;\n\tbottom: -8px;\n\tleft: -35px;\n\twidth: 220px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tz-index: -1;\n\tbackground: #d4d2d2;\n\toverflow: hidden;\n}\n.pudding__sara:before {\n\tbottom: 4px;\n\tleft: -7px;\n\twidth: 220px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tbackground: #fff;\n}\n\n</style>","\n*[data-v-3d25fde5]:before, *[data-v-3d25fde5]:after {\n\tposition: absolute;\n\tcontent: \"\";\n}\nbody[data-v-3d25fde5] {\n\twidth: 100%;\n\theight: 100%;\n\tbackground-color: #f8dee9;\n\tz-index: 10;\n}\n.dessert[data-v-3d25fde5] {\n\tposition: absolute;\n}\n.dialog[data-v-3d25fde5] {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 120px;\n\ttop: calc(45% - 170px);\n\tleft: 50%;\n}\n.hint[data-v-3d25fde5] {\n\tposition: absolute;\n\theight: 50px;\n\twidth: 300px;\n\ttop: calc(50% + 130px);\n\tleft: calc(50% - 150px);\n\tborder: 0px !important;\n}\n.pudding[data-v-3d25fde5] {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 150px;\n\ttop: 45%;\n\tleft: calc(50% - 75px);\n}\n.pudding__part[data-v-3d25fde5] {\n\tposition: absolute;\n\twidth: 150px;\n\theight: 120px;\n\tbackground: #f4d37c;\n\t-webkit-transform-origin: bottom; transform-origin: bottom;\n}\n.pudding__part[data-v-3d25fde5]:before {\n\ttop: 0;\n\tright: -10px;\n\twidth: 0;\n\theight: 0;\n\tborder-left: 10px solid #f4d37c;\n\tborder-top: 120px solid transparent;\n\tborder-bottom: 0 solid transparent;\n}\n.pudding__part[data-v-3d25fde5]:after {\n\ttop: 0;\n\tleft: -10px;\n\twidth: 0;\n\theight: 0;\n\tborder-right: 10px solid #f4d37c;\n\tborder-top: 120px solid transparent;\n\tborder-bottom: 0 solid transparent;\n}\n.pudding__cream[data-v-3d25fde5] {\n\tposition: absolute;\n\ttop: -10px;\n\tleft: 50px;\n\twidth: 45px;\n\theight: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 50%;\n\t-webkit-transform: scale(1.5); transform: scale(1.5);\n\tz-index: 10;\n}\n.pudding__cream[data-v-3d25fde5]:before {\n\ttop: -8px;\n\tleft: 7px;\n\twidth: 30px;\n\theight: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 50%;\n}\n.pudding__cream[data-v-3d25fde5]:after {\n\ttop: -18px;\n\tleft: 15px;\n\theight: 25px;\n\twidth: 15px;\n\tbackground: #fff3e5;\n\tborder-radius: 80% 10% 55% 50%/55% 10% 80% 50%;\n\t-webkit-transform: rotate(-40deg); transform: rotate(-40deg);\n}\n.pudding__cherry[data-v-3d25fde5] {\n\tposition: absolute;\n\ttop: -20px;\n\tleft: 88px;\n\twidth: 25px;\n\theight: 25px;\n\tz-index: 10;\n\tborder-radius: 50%;\n\tbackground: #eb3939;\n}\n.pudding__cherry[data-v-3d25fde5]:before {\n\ttop: -8px;\n\tleft: 11px;\n\twidth: 12px;\n\theight: 17px;\n\tborder-radius: 50%;\n\t-webkit-transform: rotate(37deg); transform: rotate(37deg);\n\tborder-left: 2px solid #323232;\n\tbackground: transparent;\n}\n.pudding__head[data-v-3d25fde5] {\n\tposition: absolute;\n\ttop: -18px;\n\twidth: 150px;\n\theight: 40px;\n\tborder-radius: 50%;\n\tbackground: #834c0e;\n}\n.pudding__bottom[data-v-3d25fde5] {\n\tposition: absolute;\n\tbottom: -25px;\n\tleft: -10px;\n\twidth: 170px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tbackground: #f4d37c;\n}\n.pudding__eye[data-v-3d25fde5] {\n\tposition: absolute;\n\twidth: 55px;\n\theight: 20px;\n\ttop: 40px;\n\tleft: 44px;\n}\n.pudding__eye[data-v-3d25fde5]:before, .pudding__eye[data-v-3d25fde5]:after {\n\tbackground: #323232;\n\tborder-radius: 50%;\n\twidth: 8px;\n\theight: 8px;\n}\n.pudding__eye[data-v-3d25fde5]:before {\n\tleft: 0;\n\t-webkit-transform: rotate(225deg); transform: rotate(225deg);\n}\n.pudding__eye[data-v-3d25fde5]:after {\n\tright: 0;\n\t-webkit-transform: rotate(45deg); transform: rotate(45deg);\n}\n.pudding__mouse[data-v-3d25fde5] {\n\tposition: absolute;\n\twidth: 20px;\n\theight: 10px;\n\ttop: 60px;\n\tleft: 63px;\n\tborder-bottom: 2px solid #323232;\n\tborder-radius: 50%;\n\tbackground: transparent;\n}\n.pudding_clicked[data-v-3d25fde5] {\n\tz-index: 10;\n}\n.pudding_clicked .pudding__part[data-v-3d25fde5] {\n\t-webkit-animation: skew-data-v-3d25fde5 2s infinite; animation: skew-data-v-3d25fde5 2s infinite;\n}\n.pudding_clicked .pudding__eye[data-v-3d25fde5]:before, .pudding_clicked .pudding__eye[data-v-3d25fde5]:after {\n\tbackground: transparent;\n\tborder-radius: 0;\n\twidth: 5px;\n\theight: 5px;\n\tborder-left: 3px solid #323232;\n\tborder-bottom: 3px solid #323232;\n}\n.pudding_clicked .pudding__mouse[data-v-3d25fde5]:before, .pudding_clicked .pudding__mouse[data-v-3d25fde5]:after {\n\tbackground: #f5e3eb;\n\twidth: 20px;\n\theight: 20px;\n\tborder-radius: 50%;\n\ttop: -10px;\n}\n.pudding_clicked .pudding__mouse[data-v-3d25fde5]:before {\n\tleft: -40px;\n}\n.pudding_clicked .pudding__mouse[data-v-3d25fde5]:after {\n\tright: -40px;\n}\n@-webkit-keyframes skew-data-v-3d25fde5 {\n0% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n5% {\n\t\t-webkit-transform: skewX(5deg); transform: skewX(5deg);\n}\n10% {\n\t\t-webkit-transform: skewX(-4deg); transform: skewX(-4deg);\n}\n15% {\n\t\t-webkit-transform: skewX(3deg); transform: skewX(3deg);\n}\n20% {\n\t\t-webkit-transform: skewX(-2deg); transform: skewX(-2deg);\n}\n25% {\n\t\t-webkit-transform: skewX(0.9deg); transform: skewX(0.9deg);\n}\n30% {\n\t\t-webkit-transform: skewX(-0.6deg); transform: skewX(-0.6deg);\n}\n35% {\n\t\t-webkit-transform: skewX(0.3deg); transform: skewX(0.3deg);\n}\n40% {\n\t\t-webkit-transform: skewX(-0.2deg); transform: skewX(-0.2deg);\n}\n45% {\n\t\t-webkit-transform: skewX(0.1deg); transform: skewX(0.1deg);\n}\n50% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n}\n@keyframes skew-data-v-3d25fde5 {\n0% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n5% {\n\t\t-webkit-transform: skewX(5deg); transform: skewX(5deg);\n}\n10% {\n\t\t-webkit-transform: skewX(-4deg); transform: skewX(-4deg);\n}\n15% {\n\t\t-webkit-transform: skewX(3deg); transform: skewX(3deg);\n}\n20% {\n\t\t-webkit-transform: skewX(-2deg); transform: skewX(-2deg);\n}\n25% {\n\t\t-webkit-transform: skewX(0.9deg); transform: skewX(0.9deg);\n}\n30% {\n\t\t-webkit-transform: skewX(-0.6deg); transform: skewX(-0.6deg);\n}\n35% {\n\t\t-webkit-transform: skewX(0.3deg); transform: skewX(0.3deg);\n}\n40% {\n\t\t-webkit-transform: skewX(-0.2deg); transform: skewX(-0.2deg);\n}\n45% {\n\t\t-webkit-transform: skewX(0.1deg); transform: skewX(0.1deg);\n}\n50% {\n\t\t-webkit-transform: skewX(0deg); transform: skewX(0deg);\n}\n}\n.pudding__sara[data-v-3d25fde5] {\n\tposition: absolute;\n\tbottom: -8px;\n\tleft: -35px;\n\twidth: 220px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tz-index: -1;\n\tbackground: #d4d2d2;\n\toverflow: hidden;\n}\n.pudding__sara[data-v-3d25fde5]:before {\n\tbottom: 4px;\n\tleft: -7px;\n\twidth: 220px;\n\theight: 45px;\n\tborder-radius: 50%;\n\tbackground: #fff;\n}\n\n"]}]);
+exports.push([module.i, "\nbody[data-v-3d25fde5] {\n\twidth: 100%;\n\theight: 100%;\n\tbackground-color: #f8dee9;\n\tz-index: 10;\n}\n\n", "",{"version":3,"sources":["src/js/components/main.vue","main.vue"],"names":[],"mappings":";AAyCA;CACA,WAAA;CACA,YAAA;CACA,yBAAA;CACA,WAAA;ACvCA","file":"main.vue","sourcesContent":["<template>\n\t<body>\n\t\t<Cake/>\n\t</body>\n</template>\n\n<script>\nimport Cake from './cake.vue'\nimport Card from './card.vue'\n\nexport default {\n\tdata: function() {\n\t\treturn {\n\t\t\tcount: 0\n\t\t}\n\t},\n\n\tcreated: function() {\n\n\t},\n\t\n\tcomponents: {\n\t\tCake, Card\n\t},\n\t\n\tcomputed: {\n\t\t\n\t},\n\t\n\twatch: {\n\n\t},\n\n\tmethods: {\n\t\t\n\t}\n  }\n</script>\n\n<style scoped>\n\nbody {\n\twidth: 100%;\n\theight: 100%;\n\tbackground-color: #f8dee9;\n\tz-index: 10;\n}\n\n</style>","\nbody[data-v-3d25fde5] {\n\twidth: 100%;\n\theight: 100%;\n\tbackground-color: #f8dee9;\n\tz-index: 10;\n}\n\n"]}]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-3d28efbc\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/card.vue":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"id":"data-v-3d28efbc","scoped":true,"sourceMap":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/card.vue ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
+// Module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "",{"version":3,"sources":[],"names":[],"mappings":"","file":"card.vue"}]);
 
 
 
@@ -981,9 +1090,9 @@ exports.push([module.i, "\n[v-cloak] {\n    display: none;\n}\nbody  {\n    font
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-3d25fde5\",\"hasScoped\":true,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/js/components/main.vue":
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-31451ae4\",\"hasScoped\":true,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/js/components/cake.vue":
 /*!****************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-3d25fde5","hasScoped":true,"optionsId":"0","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/js/components/main.vue ***!
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-31451ae4","hasScoped":true,"optionsId":"0","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/js/components/cake.vue ***!
   \****************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -997,15 +1106,26 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "body",
+    "div",
     [
-      _c("img", {
-        staticClass: "dialog",
-        staticStyle: { opacity: "0" },
-        attrs: {
-          src:
-            "https://github.com/wubi0116/wubi0116.github.io/blob/master/images/dialog.png?raw=true"
-        }
+      _vm._l(_vm.images, function(image, index) {
+        return _c("div", { key: index }, [
+          _c("img", {
+            staticClass: "dialog",
+            staticStyle: { opacity: "0" },
+            attrs: {
+              src:
+                "https://github.com/wubi0116/wubi0116.github.io/blob/master/images/" +
+                image +
+                ".png?raw=true"
+            },
+            on: {
+              click: function($event) {
+                return _vm.set_dialog_index()
+              }
+            }
+          })
+        ])
       }),
       _vm._v(" "),
       _c(
@@ -1032,10 +1152,10 @@ var render = function() {
             outline: ""
           }
         },
-        [_vm._v("\n\t\t點點看布丁，會有意想不到的驚喜 :)\n\t")]
+        [_vm._v("\n        點點看布丁，會有意想不到的驚喜 :)\n    ")]
       )
     ],
-    1
+    2
   )
 }
 var staticRenderFns = [
@@ -1063,7 +1183,72 @@ render._withStripped = true
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
+    __webpack_require__(/*! vue-hot-reload-api */ "./node_modules/vue-hot-reload-api/dist/index.js")      .rerender("data-v-31451ae4", { render: render, staticRenderFns: staticRenderFns })
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-3d25fde5\",\"hasScoped\":true,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/js/components/main.vue":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-3d25fde5","hasScoped":true,"optionsId":"0","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/js/components/main.vue ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("body", [_c("Cake")], 1)
+}
+var staticRenderFns = []
+render._withStripped = true
+
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
     __webpack_require__(/*! vue-hot-reload-api */ "./node_modules/vue-hot-reload-api/dist/index.js")      .rerender("data-v-3d25fde5", { render: render, staticRenderFns: staticRenderFns })
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-3d28efbc\",\"hasScoped\":true,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/js/components/card.vue":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-3d28efbc","hasScoped":true,"optionsId":"0","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/js/components/card.vue ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h2", [_vm._v(" Hello ")])])
+  }
+]
+render._withStripped = true
+
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+    __webpack_require__(/*! vue-hot-reload-api */ "./node_modules/vue-hot-reload-api/dist/index.js")      .rerender("data-v-3d28efbc", { render: render, staticRenderFns: staticRenderFns })
   }
 }
 
@@ -1110,6 +1295,38 @@ if (true) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-31451ae4\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/cake.vue":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"id":"data-v-31451ae4","scoped":true,"sourceMap":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/cake.vue ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"id":"data-v-31451ae4","scoped":true,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./cake.vue */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-31451ae4\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/cake.vue");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("6e490ec4", content, false, {});
+// Hot Module Replacement
+if(true) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"id":"data-v-31451ae4","scoped":true,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./cake.vue */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-31451ae4\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/cake.vue", function() {
+     var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"id":"data-v-31451ae4","scoped":true,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./cake.vue */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-31451ae4\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/cake.vue");
+     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
 /***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-3d25fde5\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/main.vue":
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"id":"data-v-3d25fde5","scoped":true,"sourceMap":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/main.vue ***!
@@ -1132,6 +1349,38 @@ if(true) {
  if(!content.locals) {
    module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"id":"data-v-3d25fde5","scoped":true,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./main.vue */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-3d25fde5\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/main.vue", function() {
      var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"id":"data-v-3d25fde5","scoped":true,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./main.vue */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-3d25fde5\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/main.vue");
+     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-3d28efbc\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/card.vue":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"id":"data-v-3d28efbc","scoped":true,"sourceMap":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/card.vue ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"id":"data-v-3d28efbc","scoped":true,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./card.vue */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-3d28efbc\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/card.vue");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("126407ba", content, false, {});
+// Hot Module Replacement
+if(true) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"id":"data-v-3d28efbc","scoped":true,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./card.vue */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-3d28efbc\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/card.vue", function() {
+     var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"id":"data-v-3d28efbc","scoped":true,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./card.vue */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-3d28efbc\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/card.vue");
      if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
      update(newContent);
    });
@@ -1226,6 +1475,132 @@ if (true) {(function () {
     hotAPI.createRecord("data-v-7d73c7f4", Component.options)
   } else {
     hotAPI.reload("data-v-7d73c7f4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+
+/***/ "./src/js/components/cake.vue":
+/*!************************************!*\
+  !*** ./src/js/components/cake.vue ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_cake_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !babel-loader!../../../node_modules/vue-loader/lib/selector?type=script&index=0!./cake.vue */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/js/components/cake.vue");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_31451ae4_hasScoped_true_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_cake_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-31451ae4","hasScoped":true,"optionsId":"0","buble":{"transforms":{}}}!../../../node_modules/vue-loader/lib/selector?type=template&index=0!./cake.vue */ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-31451ae4\",\"hasScoped\":true,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/js/components/cake.vue");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/component-normalizer */ "./node_modules/vue-loader/lib/runtime/component-normalizer.js");
+var disposed = false
+function injectStyle (context) {
+  if (disposed) return
+  __webpack_require__(/*! !vue-style-loader!css-loader?sourceMap!../../../node_modules/vue-loader/lib/style-compiler/index?{"optionsId":"0","vue":true,"id":"data-v-31451ae4","scoped":true,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector?type=styles&index=0!./cake.vue */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-31451ae4\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/cake.vue")
+}
+/* script */
+
+
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-31451ae4"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+
+var Component = Object(_node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_cake_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_31451ae4_hasScoped_true_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_cake_vue__WEBPACK_IMPORTED_MODULE_1__["render"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_31451ae4_hasScoped_true_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_cake_vue__WEBPACK_IMPORTED_MODULE_1__["staticRenderFns"],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/js/components/cake.vue"
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(/*! vue-hot-reload-api */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  hotAPI.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.js"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-31451ae4", Component.options)
+  } else {
+    hotAPI.reload("data-v-31451ae4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+
+/***/ "./src/js/components/card.vue":
+/*!************************************!*\
+  !*** ./src/js/components/card.vue ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_card_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !babel-loader!../../../node_modules/vue-loader/lib/selector?type=script&index=0!./card.vue */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/js/components/card.vue");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_3d28efbc_hasScoped_true_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_card_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-3d28efbc","hasScoped":true,"optionsId":"0","buble":{"transforms":{}}}!../../../node_modules/vue-loader/lib/selector?type=template&index=0!./card.vue */ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-3d28efbc\",\"hasScoped\":true,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/js/components/card.vue");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/component-normalizer */ "./node_modules/vue-loader/lib/runtime/component-normalizer.js");
+var disposed = false
+function injectStyle (context) {
+  if (disposed) return
+  __webpack_require__(/*! !vue-style-loader!css-loader?sourceMap!../../../node_modules/vue-loader/lib/style-compiler/index?{"optionsId":"0","vue":true,"id":"data-v-3d28efbc","scoped":true,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector?type=styles&index=0!./card.vue */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"id\":\"data-v-3d28efbc\",\"scoped\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/card.vue")
+}
+/* script */
+
+
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-3d28efbc"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+
+var Component = Object(_node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_card_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_3d28efbc_hasScoped_true_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_card_vue__WEBPACK_IMPORTED_MODULE_1__["render"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_3d28efbc_hasScoped_true_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_card_vue__WEBPACK_IMPORTED_MODULE_1__["staticRenderFns"],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/js/components/card.vue"
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(/*! vue-hot-reload-api */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  hotAPI.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.js"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3d28efbc", Component.options)
+  } else {
+    hotAPI.reload("data-v-3d28efbc", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
