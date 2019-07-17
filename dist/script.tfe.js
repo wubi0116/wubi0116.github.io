@@ -112,7 +112,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "a56a9e7c32fb677661b4";
+/******/ 	var hotCurrentHash = "2fa0a8b0ee52d5c94842";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -992,6 +992,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
@@ -1094,7 +1096,7 @@ exports.push([module.i, "\nbody[data-v-3d25fde5] {\n\twidth: 100%;\n\theight: 10
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, "\n.card[data-v-3d28efbc] {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    width: 560px; \n    height: 400px;\n    margin-top: -200px; /* Half the height */\n    margin-left: -280px; /* Half the width */\n}\n", "",{"version":3,"sources":["src/js/components/card.vue","card.vue"],"names":[],"mappings":";AAqCA;IACA,kBAAA;IACA,QAAA;IACA,SAAA;IACA,YAAA;IACA,aAAA;IACA,kBAAA,EAAA,oBAAA;IACA,mBAAA,EAAA,mBAAA;ACnCA","file":"card.vue","sourcesContent":["<template>\n    <div>\n        <img src=\"https://github.com/wubi0116/wubi0116.github.io/blob/master/images/birthday-card.png?raw=true\" class=\"card\">\n    </div>\n</template>\n\n<script>\nexport default {\n\tdata: function() {\n\t\treturn {\n\n\t\t}\n\t},\n\n\tcreated: function() {\n\n\t},\n\t\n\tcomponents: {\n\n\t},\n\t\n\tcomputed: {\n\t\t\n\t},\n\t\n\twatch: {\n\n\t},\n\n\tmethods: {\n\t\t\n\t}\n  }\n</script>\n\n<style scoped>\n    .card {\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        width: 560px; \n        height: 400px;\n        margin-top: -200px; /* Half the height */\n        margin-left: -280px; /* Half the width */\n    }\n</style>","\n.card[data-v-3d28efbc] {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    width: 560px; \n    height: 400px;\n    margin-top: -200px; /* Half the height */\n    margin-left: -280px; /* Half the width */\n}\n"]}]);
+exports.push([module.i, "\n.card[data-v-3d28efbc] {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    width: 560px; \n    height: 400px;\n    margin-left: -280px; /* Half the width */\n    margin-top: -200px; /* Half the height */\n}\n", "",{"version":3,"sources":["src/js/components/card.vue","card.vue"],"names":[],"mappings":";AAuCA;IACA,kBAAA;IACA,QAAA;IACA,SAAA;IACA,YAAA;IACA,aAAA;IACA,mBAAA,EAAA,mBAAA;IACA,kBAAA,EAAA,oBAAA;ACrCA","file":"card.vue","sourcesContent":["<template>\n    <div>\n        <img src=\"https://github.com/wubi0116/wubi0116.github.io/blob/master/images/birthday-card.png?raw=true\" class=\"card\">\n        <img src=\"https://github.com/wubi0116/wubi0116.github.io/blob/master/images/left-cat.png?raw=true\" class=\"card\">\n        <img src=\"https://github.com/wubi0116/wubi0116.github.io/blob/master/images/right-cat.png?raw=true\" class=\"card\">\n    </div>\n</template>\n\n<script>\nexport default {\n\tdata: function() {\n\t\treturn {\n\n\t\t}\n\t},\n\n\tcreated: function() {\n\n\t},\n\t\n\tcomponents: {\n\n\t},\n\t\n\tcomputed: {\n\t\t\n\t},\n\t\n\twatch: {\n\n\t},\n\n\tmethods: {\n\t\t\n\t}\n  }\n</script>\n\n<style scoped>\n    .card {\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        width: 560px; \n        height: 400px;\n        margin-left: -280px; /* Half the width */\n        margin-top: -200px; /* Half the height */\n    }\n</style>","\n.card[data-v-3d28efbc] {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    width: 560px; \n    height: 400px;\n    margin-left: -280px; /* Half the width */\n    margin-top: -200px; /* Half the height */\n}\n"]}]);
 
 
 
@@ -1279,6 +1281,22 @@ var staticRenderFns = [
         attrs: {
           src:
             "https://github.com/wubi0116/wubi0116.github.io/blob/master/images/birthday-card.png?raw=true"
+        }
+      }),
+      _vm._v(" "),
+      _c("img", {
+        staticClass: "card",
+        attrs: {
+          src:
+            "https://github.com/wubi0116/wubi0116.github.io/blob/master/images/left-cat.png?raw=true"
+        }
+      }),
+      _vm._v(" "),
+      _c("img", {
+        staticClass: "card",
+        attrs: {
+          src:
+            "https://github.com/wubi0116/wubi0116.github.io/blob/master/images/right-cat.png?raw=true"
         }
       })
     ])
