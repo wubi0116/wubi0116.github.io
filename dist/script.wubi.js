@@ -112,7 +112,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "60a65ba691363ed5fd2d";
+/******/ 	var hotCurrentHash = "942b54cc9c7456c0b679";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -869,7 +869,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_main_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/main.vue */ "./src/js/components/main.vue");
+/* harmony import */ var _components_login_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/login.vue */ "./src/js/components/login.vue");
 //
 //
 //
@@ -885,10 +885,184 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {},
   components: {
-    Main: _components_main_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Login: _components_login_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   methods: {},
   name: 'App'
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/js/components/login.vue":
+/*!***********************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/js/components/login.vue ***!
+  \***********************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _main_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.vue */ "./src/js/components/main.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      show_main_component: false,
+      right_answer: false,
+      wrong_answer: false,
+      question_index: 0,
+      question_max_index: 2,
+      questions: [{
+        "title": "問題一： 請問妳是誰？",
+        "answers": [{
+          "icon_num": "a",
+          "content": "阿比比",
+          "color": "#9c27b0",
+          "correct": false
+        }, {
+          "icon_num": "b",
+          "content": "比薩斜塔",
+          "color": "#fb8c00",
+          "correct": false
+        }, {
+          "icon_num": "c",
+          "content": "老婆餅",
+          "color": "#4baf50",
+          "correct": false
+        }, {
+          "icon_num": "d",
+          "content": "wubi",
+          "color": "#ff5251",
+          "correct": false
+        }, {
+          "icon_num": "e",
+          "content": "以上皆是",
+          "color": "#2196f3",
+          "correct": true
+        }]
+      }, {
+        "title": "問題二： 請問妳老公是誰？",
+        "answers": [{
+          "icon_num": "a",
+          "content": "阿垣垣",
+          "color": "#4baf50",
+          "correct": false
+        }, {
+          "icon_num": "b",
+          "content": "坦克車",
+          "color": "#2196f3",
+          "correct": false
+        }, {
+          "icon_num": "c",
+          "content": "太陽餅",
+          "color": "#9c27b0",
+          "correct": false
+        }, {
+          "icon_num": "d",
+          "content": "ts",
+          "color": "#ff5251",
+          "correct": false
+        }, {
+          "icon_num": "e",
+          "content": "以上皆是",
+          "color": "#fb8c00",
+          "correct": true
+        }]
+      }, {
+        "title": "問題三： 請問今天是什麼日子？",
+        "answers": [{
+          "icon_num": "a",
+          "content": "阿比的生日",
+          "color": "#fb8c00",
+          "correct": false
+        }, {
+          "icon_num": "b",
+          "content": "アビーの誕生日",
+          "color": "#9c27b0",
+          "correct": false
+        }, {
+          "icon_num": "c",
+          "content": "애비의 생일",
+          "color": "#2196f3",
+          "correct": false
+        }, {
+          "icon_num": "d",
+          "content": "wubibi's birthday",
+          "color": "#ff5251",
+          "correct": false
+        }, {
+          "icon_num": "e",
+          "content": "以上皆是",
+          "color": "#4baf50",
+          "correct": true
+        }]
+      }]
+    };
+  },
+  created: function created() {},
+  components: {
+    Main: _main_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    question: function question() {
+      return this.questions[this.question_index];
+    }
+  },
+  watch: {},
+  methods: {
+    next_question: function next_question(answer) {
+      if (this.question_index == this.question_max_index && answer) {
+        this.show_main_component = true;
+      } else if (answer) {
+        this.question_index += 1;
+        this.right_answer = true;
+      } else {
+        this.wrong_answer = true;
+      }
+    }
+  }
 });
 
 /***/ }),
@@ -904,6 +1078,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_typer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-typer */ "./node_modules/vue-typer/dist/vue-typer.min.js");
 /* harmony import */ var vue_typer__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_typer__WEBPACK_IMPORTED_MODULE_0__);
+//
 //
 //
 //
@@ -1088,17 +1263,8 @@ __webpack_require__.r(__webpack_exports__);
         var fully_judge = position.bottom <= window.innerHeight;
         var custom_judge = partially_judge && window.innerHeight - position.top > half_target_height;
 
-        if (fully_judge) {
-          console.log('該元件可以被完整看到！');
-        }
-
-        if (custom_judge) {
-          console.log('該元件可看到一半');
-        }
-
         if (partially_judge) {
           $this.partially_judge = true;
-          console.log('該元件有一部分可以看到');
         }
       });
     },
@@ -1142,6 +1308,21 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"scoped\":false,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/login.vue":
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"scoped":false,"sourceMap":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/login.vue ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
+// Module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "",{"version":3,"sources":[],"names":[],"mappings":"","file":"login.vue"}]);
+
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"scoped\":false,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/main.vue":
 /*!************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"scoped":false,"sourceMap":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/main.vue ***!
@@ -1151,9 +1332,197 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, "\n.vue-typer {\n  \t\tfont-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;\n}\n.vue-typer .custom.char.typed {\n  \t\tcolor: #f4f8f8;\n}\n.left-icon {\n\t\tposition: absolute;\n\t\tleft: 50px;\n\t\ttop: calc(50% - 20px);\n}\n.right-icon {\n\t\tposition: absolute;\n\t\tright: 50px;\n\t\ttop: calc(50% - 20px);\n}\nhr#myhr {\n\t\tbackground-color: #fff;\n\t\tborder: 2px dashed #f9af64;\n}\n\t\n", "",{"version":3,"sources":["src/js/components/main.vue","main.vue"],"names":[],"mappings":";AAuPA;IACA,2DAAA;ACrPA;ADwPA;IACA,cAAA;ACtPA;ADyPA;EACA,kBAAA;EACA,UAAA;EACA,qBAAA;ACvPA;AD0PA;EACA,kBAAA;EACA,WAAA;EACA,qBAAA;ACxPA;AD2PA;EACA,sBAAA;EACA,0BAAA;ACzPA","file":"main.vue","sourcesContent":["<template>\n\t<div id=\"mainpage\">\n\t\t<v-timeline>\n\t\t\t<v-timeline-item v-for=\"(item, i) in items\" :key=\"i\" \n\t\t\t\t:color=\"item.timeline_color\"\n\t\t\t\t:icon=\"item.icon\"\n\t\t\t\tfill-dot\n\t\t\t>\n\t\t\t\t<template v-slot:opposite>\n\t\t\t\t\t<span \n\t\t\t\t\t:style=\"{'color': item.date_color, 'font-weight': 'bold'}\"\n\t\t\t\t\tv-text=\"item.date\"\n\t\t\t\t\t></span>\n\t\t\t\t</template>\n\n\t\t\t\t<v-card class=\"elevation-2\">\n\t\t\t\t\t<v-card-title class=\"title\" :class=\"item.timeline_color\" style=\"color: white\"> {{ item.title }} </v-card-title>\n\t\t\t\t\t<v-card-text class=\"white text--primary\" style=\"padding-top: 16px;\">\n\t\t\t\t\t\t<font style=\"white-space: pre-line\"> {{ item.contents }} </font>\n\t\t\t\t\t\t<v-spacer></v-spacer>\n\t\t\t\t\t\t<div class=\"text-right\" v-if=\"item.has_media\">\n\t\t\t\t\t\t\t<v-icon @click=\"show_video(item.media_srcs)\"> mdi-folder-multiple-image </v-icon>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</v-card-text>\n\t\t\t\t</v-card>\n\t\t\t</v-timeline-item>\n\t\t</v-timeline>\n\n\t\t<div style=\"height: 100px\"></div>\n\t\t<hr id=\"myhr\">\n\t\t<div id=\"target\" style=\"height: 20px\"></div>\n\n\t\t<v-card v-if=\"partially_judge\" class=\"mx-auto\" color=\"#26c6da\" dark max-width=\"400\">\n\t\t\t<v-card-title>\n\t\t\t\t<v-icon large left>\n\t\t\t\tmdi-twitter\n\t\t\t\t</v-icon>\n\t\t\t\t<span class=\"title font-weight-light\">Twitter</span>\n\t\t\t</v-card-title>\n\t\n\t\t\t<v-card-text>\n\t\t\t\t<VueTyper\n\t\t\t\t\t:text='sentences'\n\t\t\t\t\t:repeat='0'\n\t\t\t\t\t:shuffle='false'\n\t\t\t\t\tinitial-action='typing'\n\t\t\t\t\t:pre-type-delay='1000'\n\t\t\t\t\t:type-delay='200'\n\t\t\t\t\t:erase-delay='500'\n\t\t\t\t\terase-style='clear'\n\t\t\t\t\t:erase-on-complete='false'\n\t\t\t\t\tcaret-animation='smooth'\n\t\t\t\t></VueTyper>\n\t\t\t</v-card-text>\n\t\n\t\t\t<v-card-actions>\n\t\t\t\t<v-list-item class=\"grow\">\n\t\t\t\t\t<v-list-item-avatar color=\"grey darken-3\">\n\t\t\t\t\t\t<v-img\n\t\t\t\t\t\tclass=\"elevation-6\"\n\t\t\t\t\t\tsrc=\"https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light\"\n\t\t\t\t\t\t></v-img>\n\t\t\t\t\t</v-list-item-avatar>\n\t\t\t\n\t\t\t\t\t<v-list-item-content>\n\t\t\t\t\t\t<v-list-item-title>Evan You</v-list-item-title>\n\t\t\t\t\t</v-list-item-content>\n\t\t\t\n\t\t\t\t\t<v-row align=\"center\" justify=\"end\">\n\t\t\t\t\t\t<v-icon class=\"mr-1\">mdi-heart</v-icon>\n\t\t\t\t\t\t<span class=\"subheading mr-2\">256</span>\n\t\t\t\t\t\t<span class=\"mr-1\">·</span>\n\t\t\t\t\t\t<v-icon class=\"mr-1\">mdi-share-variant</v-icon>\n\t\t\t\t\t\t<span class=\"subheading\">45</span>\n\t\t\t\t\t</v-row>\n\t\t\t\t</v-list-item>\n\t\t\t</v-card-actions>\n\t\t</v-card>\n\n\t\t<v-dialog v-model=\"show_video_dialog\" width=\"80%\"\n\t\t@keydown.enter=\"show_video_dialog = false\" @keydown.esc=\"show_video_dialog = false\">\n\t\t\t<v-card style=\"text-align: center;\">\n\t\t\t\t<v-card-text>\n\t\t\t\t\t<div style=\"height: 20px\"></div>\n\t\t\t\t\t<v-btn v-show=\"this.media_srcs.length > 1\" @click=\"ctrl_media_index('minus')\"\n\t\t\t\t\t\tfab dark small color=\"blue\" class=\"left-icon\">\n\t\t\t\t\t\t<v-icon dark>mdi-chevron-left</v-icon>\n\t\t\t\t\t</v-btn>\n\t\t\t\t\t<img :src=\"media_srcs[media_index]\" style=\"width: 70%;\"/>\n\t\t\t\t\t<v-btn v-show=\"this.media_srcs.length > 1\" @click=\"ctrl_media_index('add')\"\n\t\t\t\t\t\tfab dark small color=\"blue\" class=\"right-icon\">\n\t\t\t\t\t\t<v-icon dark>mdi-chevron-right</v-icon>\n\t\t\t\t\t</v-btn>\n\n\t\t\t\t\t<v-card-actions>\n\t\t\t\t\t\t<v-spacer></v-spacer>\n\t\t\t\t\t\t<v-btn color=\"error\" dark @click=\"show_video_dialog = false\">關閉</v-btn>\n\t\t\t\t\t</v-card-actions>\n\t\t\t\t</v-card-text>\n\t\t\t</v-card>\n\t\t</v-dialog>\n\n\t</div>\n</template>\n\n<script>\n\nimport { VueTyper } from 'vue-typer'\n\nexport default {\n\tdata: function() {\n\t\treturn {\n\t\t\tpartially_judge: false,\n\t\t\tshow_card: false,\n\t\t\tsentences: ['阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂', ''],\n\t\t\tshow_video_dialog: false,\n\t\t\tmedia_srcs: '',\n\t\t\tmedia_index: 0,\n\t\t\titems: [\n\t\t\t\t{\n\t\t\t\t\ttimeline_color: 'green darken-2',\n\t\t\t\t\ticon: 'mdi-clover',\n\t\t\t\t\ttitle: '奇妙緣份',\n\t\t\t\t\tdate: '2019-06-30',\n\t\t\t\t\tdate_color: 'green',\n\t\t\t\t\tcontents: '今天是很特別的日子，Dcard抽的女生名字居然是英文！阿垣心想那麼有氣質又可愛的女生，會加我好友嗎？🤔\\n互加好友後阿垣問說阿比是不是越南人😂一切就從這裡開始～～',\n\t\t\t\t\thas_media: true,\n\t\t\t\t\tmedia_srcs: ['/static/images/0630-first-time.png']\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\ttimeline_color: 'cyan darken-2',\n\t\t\t\t\ticon: 'mdi-emoticon-sad-outline',\n\t\t\t\t\ttitle: '害怕失去',\n\t\t\t\t\tdate: '2019-09-01',\n\t\t\t\t\tdate_color: '#0097a7',\n\t\t\t\t\tcontents: '這天是個不太快樂的日子，阿垣想要跟阿比在一起，但不確定阿比的心意，得失心很重QQ\\n阿垣整個晚上都睡不太好，阿比也說自己一直哭，但醒來之後的阿垣有個新想法，那就是只要阿比在就好了！珍惜現在所擁有的吧～',\n\t\t\t\t\thas_media: false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\ttimeline_color: 'pink darken-2',\n\t\t\t\t\ticon: 'mdi-bed-empty',\n\t\t\t\t\ttitle: '床鋪事件',\n\t\t\t\t\tdate: '2019-09-15',\n\t\t\t\t\tdate_color: '#c2175b',\n\t\t\t\t\tcontents: '士官長因為阿比晚睡，不買床墊給阿比，阿垣很擔心阿比睡瑜珈墊會不舒服，想要網購瑜珈墊給阿比，阿比感受到阿垣的關心，很感動也很珍惜～',\n\t\t\t\t\thas_media: true,\n\t\t\t\t\tmedia_srcs: ['/static/images/0915-bed.png']\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\ttimeline_color: 'orange darken-2',\n\t\t\t\t\ticon: 'mdi-balloon',\n\t\t\t\t\ttitle: '告白氣球',\n\t\t\t\t\tdate: '2019-10-12',\n\t\t\t\t\tdate_color: '#f57c00',\n\t\t\t\t\tcontents: '阿比收回了兩句訊息，阿垣只看到其中一句，經過一番死纏爛打的詢問之後，阿比才鬆口說喜歡阿垣，阿垣先是懷疑自己有沒有看錯，確認無誤之後...又感動又開心的一直陷入迷弟模式xD',\n\t\t\t\t\thas_media: true,\n\t\t\t\t\tmedia_srcs: ['/static/images/1012-ask.png', '/static/images/1012-love-you.png']\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\ttimeline_color: 'red darken-2',\n\t\t\t\t\ticon: 'mdi-heart',\n\t\t\t\t\ttitle: '愛の話語',\n\t\t\t\t\tdate: '2019-10-21',\n\t\t\t\t\tdate_color: 'red',\n\t\t\t\t\tcontents: '阿垣問阿比喜歡自己的原因，阿比打了好長一串，阿垣也跟阿比說了自己欣賞阿比的原因～很感謝阿比看得到我的好️❤️',\n\t\t\t\t\thas_media: true,\n\t\t\t\t\tmedia_srcs: ['/static/images/1021-love-words-by-wubi.png', '/static/images/1021-love-words-by-ts.png']\n\t\t\t\t},\n\t\t\t],\n\t\t}\n\t},\n\n\tcreated: function() {\n\t\tthis.detect_element_in_window();\n\t},\n\t\n\tcomponents: {\n\t\tVueTyper\n\t},\n\t\n\tcomputed: {\n\t\t\n\t},\n\t\n\twatch: {\n\n\t},\n\n\tmethods: {\n\t\tdetect_element_in_window: function() {\n\t\t\tlet $this = this;\n\t\t\twindow.addEventListener('scroll', function() {\n\t\t\t\tlet element = document.querySelector('#target'); // 填入元件css selector\n\t\t\t\tlet position = element.getBoundingClientRect();\n\t\t\t\tlet target_width = element.clientWidth;\n\t\t\t\tlet target_height = element.clientHeight;\n\t\t\t\tlet half_target_height = target_height / 2;\n\n\t\t\t\tlet partially_judge = position.top < window.innerHeight;\n\t\t\t\tlet fully_judge = position.bottom <= window.innerHeight;\n\t\t\t\tlet custom_judge = partially_judge && (window.innerHeight - position.top > half_target_height);\n\n\t\t\t\tif(fully_judge) {\n\t\t\t\t\tconsole.log('該元件可以被完整看到！');\n\t\t\t\t}\n\n\t\t\t\tif(custom_judge) {\n\t\t\t\t\tconsole.log('該元件可看到一半');\n\t\t\t\t}\n\n\t\t\t\tif(partially_judge) {\n\t\t\t\t\t$this.partially_judge = true;\n\t\t\t\t\tconsole.log('該元件有一部分可以看到');\n\t\t\t\t}\n\t\t\t});\n\t\t},\n\n\t\tshow_video: function(media_srcs) {\n\t\t\tthis.media_srcs = media_srcs;\n\t\t\tthis.show_video_dialog = true;\n\t\t\tthis.media_index = 0;\n\t\t},\n\n\t\tctrl_media_index: function(op) {\n\t\t\tif(op == 'add') {\n\t\t\t\tif(this.media_index < this.media_srcs.length - 1) {\n\t\t\t\t\tthis.media_index += 1;\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\tthis.media_index = 0;\n\t\t\t\t}\n\t\t\t}\n\t\t\telse if(op == 'minus') {\n\t\t\t\tif(this.media_index > 0) {\n\t\t\t\t\tthis.media_index -= 1;\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\tthis.media_index = this.media_srcs.length - 1;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n  }\n</script>\n\n<style>\n\n\t.vue-typer {\n  \t\tfont-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;\n\t}\n\n\t.vue-typer .custom.char.typed {\n  \t\tcolor: #f4f8f8;\n\t}\n\n\t.left-icon {\n\t\tposition: absolute;\n\t\tleft: 50px;\n\t\ttop: calc(50% - 20px);\n\t}\n\n\t.right-icon {\n\t\tposition: absolute;\n\t\tright: 50px;\n\t\ttop: calc(50% - 20px);\n\t}\n\n\thr#myhr {\n\t\tbackground-color: #fff;\n\t\tborder: 2px dashed #f9af64;\n\t}\n\t\n</style>","\n.vue-typer {\n  \t\tfont-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;\n}\n.vue-typer .custom.char.typed {\n  \t\tcolor: #f4f8f8;\n}\n.left-icon {\n\t\tposition: absolute;\n\t\tleft: 50px;\n\t\ttop: calc(50% - 20px);\n}\n.right-icon {\n\t\tposition: absolute;\n\t\tright: 50px;\n\t\ttop: calc(50% - 20px);\n}\nhr#myhr {\n\t\tbackground-color: #fff;\n\t\tborder: 2px dashed #f9af64;\n}\n\t\n"]}]);
+exports.push([module.i, "\n.vue-typer {\n  \t\tfont-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;\n}\n.vue-typer .custom.char.typed {\n  \t\tcolor: #f4f8f8;\n}\n.left-icon {\n\t\tposition: absolute;\n\t\tleft: 50px;\n\t\ttop: calc(50% - 20px);\n}\n.right-icon {\n\t\tposition: absolute;\n\t\tright: 50px;\n\t\ttop: calc(50% - 20px);\n}\nhr#myhr {\n\t\tbackground-color: #fff;\n\t\tborder: 2px dashed #f9af64;\n}\n\t\n", "",{"version":3,"sources":["src/js/components/main.vue","main.vue"],"names":[],"mappings":";AA+OA;IACA,2DAAA;AC7OA;ADgPA;IACA,cAAA;AC9OA;ADiPA;EACA,kBAAA;EACA,UAAA;EACA,qBAAA;AC/OA;ADkPA;EACA,kBAAA;EACA,WAAA;EACA,qBAAA;AChPA;ADmPA;EACA,sBAAA;EACA,0BAAA;ACjPA","file":"main.vue","sourcesContent":["<template>\n\t<div id=\"mainpage\">\n\t\t<v-timeline>\n\t\t\t<v-timeline-item v-for=\"(item, i) in items\" :key=\"i\" \n\t\t\t\t:color=\"item.timeline_color\"\n\t\t\t\t:icon=\"item.icon\"\n\t\t\t\tfill-dot\n\t\t\t>\n\t\t\t\t<template v-slot:opposite>\n\t\t\t\t\t<span \n\t\t\t\t\t:style=\"{'color': item.date_color, 'font-weight': 'bold'}\"\n\t\t\t\t\tv-text=\"item.date\"\n\t\t\t\t\t></span>\n\t\t\t\t</template>\n\n\t\t\t\t<v-card class=\"elevation-2\">\n\t\t\t\t\t<v-card-title class=\"title\" :class=\"item.timeline_color\" style=\"color: white\"> {{ item.title }} </v-card-title>\n\t\t\t\t\t<v-card-text class=\"white text--primary\" style=\"padding-top: 16px;\">\n\t\t\t\t\t\t<font style=\"white-space: pre-line\"> {{ item.contents }} </font>\n\t\t\t\t\t\t<v-spacer></v-spacer>\n\t\t\t\t\t\t<div class=\"text-right\" v-if=\"item.has_media\">\n\t\t\t\t\t\t\t<v-icon @click=\"show_video(item.media_srcs)\"> mdi-folder-multiple-image </v-icon>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</v-card-text>\n\t\t\t\t</v-card>\n\t\t\t</v-timeline-item>\n\t\t</v-timeline>\n\n\t\t<div style=\"height: 100px\"></div>\n\t\t<hr id=\"myhr\">\n\t\t<div id=\"target\" style=\"height: 20px\"></div>\n\n\t\t<v-card v-if=\"partially_judge\" class=\"mx-auto\" color=\"#26c6da\" dark max-width=\"400\">\n\t\t\t<v-card-title>\n\t\t\t\t<v-icon large left>\n\t\t\t\tmdi-twitter\n\t\t\t\t</v-icon>\n\t\t\t\t<span class=\"title font-weight-light\">Twitter</span>\n\t\t\t</v-card-title>\n\t\n\t\t\t<v-card-text>\n\t\t\t\t<VueTyper\n\t\t\t\t\tv-if=\"partially_judge\"\n\t\t\t\t\t:text='sentences'\n\t\t\t\t\t:repeat='0'\n\t\t\t\t\t:shuffle='false'\n\t\t\t\t\tinitial-action='typing'\n\t\t\t\t\t:pre-type-delay='1000'\n\t\t\t\t\t:type-delay='200'\n\t\t\t\t\t:erase-delay='500'\n\t\t\t\t\terase-style='clear'\n\t\t\t\t\t:erase-on-complete='false'\n\t\t\t\t\tcaret-animation='smooth'\n\t\t\t\t></VueTyper>\n\t\t\t</v-card-text>\n\t\n\t\t\t<v-card-actions>\n\t\t\t\t<v-list-item class=\"grow\">\n\t\t\t\t\t<v-list-item-avatar color=\"grey darken-3\">\n\t\t\t\t\t\t<v-img\n\t\t\t\t\t\tclass=\"elevation-6\"\n\t\t\t\t\t\tsrc=\"https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light\"\n\t\t\t\t\t\t></v-img>\n\t\t\t\t\t</v-list-item-avatar>\n\t\t\t\n\t\t\t\t\t<v-list-item-content>\n\t\t\t\t\t\t<v-list-item-title>Evan You</v-list-item-title>\n\t\t\t\t\t</v-list-item-content>\n\t\t\t\n\t\t\t\t\t<v-row align=\"center\" justify=\"end\">\n\t\t\t\t\t\t<v-icon class=\"mr-1\">mdi-heart</v-icon>\n\t\t\t\t\t\t<span class=\"subheading mr-2\">256</span>\n\t\t\t\t\t\t<span class=\"mr-1\">·</span>\n\t\t\t\t\t\t<v-icon class=\"mr-1\">mdi-share-variant</v-icon>\n\t\t\t\t\t\t<span class=\"subheading\">45</span>\n\t\t\t\t\t</v-row>\n\t\t\t\t</v-list-item>\n\t\t\t</v-card-actions>\n\t\t</v-card>\n\n\t\t<v-dialog v-model=\"show_video_dialog\" width=\"80%\"\n\t\t@keydown.enter=\"show_video_dialog = false\" @keydown.esc=\"show_video_dialog = false\">\n\t\t\t<v-card style=\"text-align: center;\">\n\t\t\t\t<v-card-text>\n\t\t\t\t\t<div style=\"height: 20px\"></div>\n\t\t\t\t\t<v-btn v-show=\"this.media_srcs.length > 1\" @click=\"ctrl_media_index('minus')\"\n\t\t\t\t\t\tfab dark small color=\"blue\" class=\"left-icon\">\n\t\t\t\t\t\t<v-icon dark>mdi-chevron-left</v-icon>\n\t\t\t\t\t</v-btn>\n\t\t\t\t\t<img :src=\"media_srcs[media_index]\" style=\"width: 70%;\"/>\n\t\t\t\t\t<v-btn v-show=\"this.media_srcs.length > 1\" @click=\"ctrl_media_index('add')\"\n\t\t\t\t\t\tfab dark small color=\"blue\" class=\"right-icon\">\n\t\t\t\t\t\t<v-icon dark>mdi-chevron-right</v-icon>\n\t\t\t\t\t</v-btn>\n\n\t\t\t\t\t<v-card-actions>\n\t\t\t\t\t\t<v-spacer></v-spacer>\n\t\t\t\t\t\t<v-btn color=\"error\" dark @click=\"show_video_dialog = false\">關閉</v-btn>\n\t\t\t\t\t</v-card-actions>\n\t\t\t\t</v-card-text>\n\t\t\t</v-card>\n\t\t</v-dialog>\n\n\t</div>\n</template>\n\n<script>\n\nimport { VueTyper } from 'vue-typer'\n\nexport default {\n\tdata: function() {\n\t\treturn {\n\t\t\tpartially_judge: false,\n\t\t\tshow_card: false,\n\t\t\tsentences: ['阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂阿比比我愛你，希望你一直都很開心快樂', ''],\n\t\t\tshow_video_dialog: false,\n\t\t\tmedia_srcs: '',\n\t\t\tmedia_index: 0,\n\t\t\titems: [\n\t\t\t\t{\n\t\t\t\t\ttimeline_color: 'green darken-2',\n\t\t\t\t\ticon: 'mdi-clover',\n\t\t\t\t\ttitle: '奇妙緣份',\n\t\t\t\t\tdate: '2019-06-30',\n\t\t\t\t\tdate_color: 'green',\n\t\t\t\t\tcontents: '今天是很特別的日子，Dcard抽的女生名字居然是英文！阿垣心想那麼有氣質又可愛的女生，會加我好友嗎？🤔\\n互加好友後阿垣問說阿比是不是越南人😂一切就從這裡開始～～',\n\t\t\t\t\thas_media: true,\n\t\t\t\t\tmedia_srcs: ['/static/images/0630-first-time.png']\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\ttimeline_color: 'cyan darken-2',\n\t\t\t\t\ticon: 'mdi-emoticon-sad-outline',\n\t\t\t\t\ttitle: '害怕失去',\n\t\t\t\t\tdate: '2019-09-01',\n\t\t\t\t\tdate_color: '#0097a7',\n\t\t\t\t\tcontents: '這天是個不太快樂的日子，阿垣想要跟阿比在一起，但不確定阿比的心意，得失心很重QQ\\n阿垣整個晚上都睡不太好，阿比也說自己一直哭，但醒來之後的阿垣有個新想法，那就是只要阿比在就好了！珍惜現在所擁有的吧～',\n\t\t\t\t\thas_media: false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\ttimeline_color: 'pink darken-2',\n\t\t\t\t\ticon: 'mdi-bed-empty',\n\t\t\t\t\ttitle: '床鋪事件',\n\t\t\t\t\tdate: '2019-09-15',\n\t\t\t\t\tdate_color: '#c2175b',\n\t\t\t\t\tcontents: '士官長因為阿比晚睡，不買床墊給阿比，阿垣很擔心阿比睡瑜珈墊會不舒服，想要網購瑜珈墊給阿比，阿比感受到阿垣的關心，很感動也很珍惜～',\n\t\t\t\t\thas_media: true,\n\t\t\t\t\tmedia_srcs: ['/static/images/0915-bed.png']\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\ttimeline_color: 'orange darken-2',\n\t\t\t\t\ticon: 'mdi-balloon',\n\t\t\t\t\ttitle: '告白氣球',\n\t\t\t\t\tdate: '2019-10-12',\n\t\t\t\t\tdate_color: '#f57c00',\n\t\t\t\t\tcontents: '阿比收回了兩句訊息，阿垣只看到其中一句，經過一番死纏爛打的詢問之後，阿比才鬆口說喜歡阿垣，阿垣先是懷疑自己有沒有看錯，確認無誤之後...又感動又開心的一直陷入迷弟模式xD',\n\t\t\t\t\thas_media: true,\n\t\t\t\t\tmedia_srcs: ['/static/images/1012-ask.png', '/static/images/1012-love-you.png']\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\ttimeline_color: 'red darken-2',\n\t\t\t\t\ticon: 'mdi-heart',\n\t\t\t\t\ttitle: '愛の話語',\n\t\t\t\t\tdate: '2019-10-21',\n\t\t\t\t\tdate_color: 'red',\n\t\t\t\t\tcontents: '阿垣問阿比喜歡自己的原因，阿比打了好長一串，阿垣也跟阿比說了自己欣賞阿比的原因～很感謝阿比看得到我的好️❤️',\n\t\t\t\t\thas_media: true,\n\t\t\t\t\tmedia_srcs: ['/static/images/1021-love-words-by-wubi.png', '/static/images/1021-love-words-by-ts.png']\n\t\t\t\t},\n\t\t\t],\n\t\t}\n\t},\n\n\tcreated: function() {\n\t\tthis.detect_element_in_window();\n\t},\n\t\n\tcomponents: {\n\t\tVueTyper\n\t},\n\t\n\tcomputed: {\n\t\t\n\t},\n\t\n\twatch: {\n\n\t},\n\n\tmethods: {\n\t\tdetect_element_in_window: function() {\n\t\t\tlet $this = this;\n\t\t\twindow.addEventListener('scroll', function() {\n\t\t\t\tlet element = document.querySelector('#target'); // 填入元件css selector\n\t\t\t\tlet position = element.getBoundingClientRect();\n\t\t\t\tlet target_width = element.clientWidth;\n\t\t\t\tlet target_height = element.clientHeight;\n\t\t\t\tlet half_target_height = target_height / 2;\n\n\t\t\t\tlet partially_judge = position.top < window.innerHeight;\n\t\t\t\tlet fully_judge = position.bottom <= window.innerHeight;\n\t\t\t\tlet custom_judge = partially_judge && (window.innerHeight - position.top > half_target_height);\n\n\t\t\t\tif(partially_judge) {\n\t\t\t\t\t$this.partially_judge = true;\n\t\t\t\t}\n\t\t\t});\n\t\t},\n\n\t\tshow_video: function(media_srcs) {\n\t\t\tthis.media_srcs = media_srcs;\n\t\t\tthis.show_video_dialog = true;\n\t\t\tthis.media_index = 0;\n\t\t},\n\n\t\tctrl_media_index: function(op) {\n\t\t\tif(op == 'add') {\n\t\t\t\tif(this.media_index < this.media_srcs.length - 1) {\n\t\t\t\t\tthis.media_index += 1;\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\tthis.media_index = 0;\n\t\t\t\t}\n\t\t\t}\n\t\t\telse if(op == 'minus') {\n\t\t\t\tif(this.media_index > 0) {\n\t\t\t\t\tthis.media_index -= 1;\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\tthis.media_index = this.media_srcs.length - 1;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n  }\n</script>\n\n<style>\n\n\t.vue-typer {\n  \t\tfont-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;\n\t}\n\n\t.vue-typer .custom.char.typed {\n  \t\tcolor: #f4f8f8;\n\t}\n\n\t.left-icon {\n\t\tposition: absolute;\n\t\tleft: 50px;\n\t\ttop: calc(50% - 20px);\n\t}\n\n\t.right-icon {\n\t\tposition: absolute;\n\t\tright: 50px;\n\t\ttop: calc(50% - 20px);\n\t}\n\n\thr#myhr {\n\t\tbackground-color: #fff;\n\t\tborder: 2px dashed #f9af64;\n\t}\n\t\n</style>","\n.vue-typer {\n  \t\tfont-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;\n}\n.vue-typer .custom.char.typed {\n  \t\tcolor: #f4f8f8;\n}\n.left-icon {\n\t\tposition: absolute;\n\t\tleft: 50px;\n\t\ttop: calc(50% - 20px);\n}\n.right-icon {\n\t\tposition: absolute;\n\t\tright: 50px;\n\t\ttop: calc(50% - 20px);\n}\nhr#myhr {\n\t\tbackground-color: #fff;\n\t\tborder: 2px dashed #f9af64;\n}\n\t\n"]}]);
 
 
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-12b63ded\",\"hasScoped\":false,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/js/components/login.vue":
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-12b63ded","hasScoped":false,"optionsId":"0","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/js/components/login.vue ***!
+  \******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { attrs: { id: "loginpage" } },
+    [
+      !_vm.show_main_component
+        ? [
+            _c(
+              "v-layout",
+              { attrs: { row: "", "justify-center": "" } },
+              [
+                _c(
+                  "v-alert",
+                  {
+                    staticStyle: { "margin-top": "20px" },
+                    attrs: { outlined: "", type: "info" }
+                  },
+                  [
+                    _c("h3", [
+                      _vm._v(" 歡迎光臨，為了順利進入此系統，請回答以下問題！ ")
+                    ])
+                  ]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "v-layout",
+              {
+                staticStyle: { margin: "10px 0px" },
+                attrs: { row: "", "justify-center": "" }
+              },
+              [
+                _c(
+                  "v-alert",
+                  {
+                    staticStyle: { width: "70%" },
+                    attrs: {
+                      color: "#2A3B4D",
+                      dark: "",
+                      icon: "mdi-help-circle-outline",
+                      dense: ""
+                    }
+                  },
+                  [
+                    _c("h2", [
+                      _vm._v(" " + _vm._s(_vm.question["title"]) + " ")
+                    ])
+                  ]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _vm._l(_vm.question["answers"], function(answer, a_index) {
+              return _c(
+                "v-layout",
+                {
+                  key: "answer" + a_index,
+                  attrs: { row: "", "justify-center": "" }
+                },
+                [
+                  _c(
+                    "div",
+                    { staticStyle: { margin: "10px 0px", width: "70%" } },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: {
+                            block: "",
+                            color: answer["color"],
+                            dark: ""
+                          },
+                          on: {
+                            click: function($event) {
+                              return _vm.next_question(answer["correct"])
+                            }
+                          }
+                        },
+                        [
+                          _c("v-icon", { attrs: { right: "", dark: "" } }, [
+                            _vm._v(
+                              "mdi-alpha-" +
+                                _vm._s(answer["icon_num"]) +
+                                "-circle"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "strong",
+                            { staticStyle: { "padding-left": "20px" } },
+                            [_vm._v(" " + _vm._s(answer["content"]) + " ")]
+                          ),
+                          _vm._v(" "),
+                          _c("v-spacer")
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ]
+              )
+            }),
+            _vm._v(" "),
+            _c(
+              "v-snackbar",
+              {
+                attrs: { top: "", color: "success", timeout: "1000" },
+                model: {
+                  value: _vm.right_answer,
+                  callback: function($$v) {
+                    _vm.right_answer = $$v
+                  },
+                  expression: "right_answer"
+                }
+              },
+              [
+                _c("v-icon", { attrs: { color: "white", left: "" } }, [
+                  _vm._v(" mdi-check-circle-outline ")
+                ]),
+                _vm._v(" "),
+                _c("strong", [_vm._v(" 耶～～～你答對了！ ")]),
+                _vm._v(" "),
+                _c("v-spacer")
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "v-snackbar",
+              {
+                attrs: { top: "", color: "error", timeout: "1000" },
+                model: {
+                  value: _vm.wrong_answer,
+                  callback: function($$v) {
+                    _vm.wrong_answer = $$v
+                  },
+                  expression: "wrong_answer"
+                }
+              },
+              [
+                _c("v-icon", { attrs: { color: "white", left: "" } }, [
+                  _vm._v(" mdi-alert-circle-outline ")
+                ]),
+                _vm._v(" "),
+                _c("strong", [_vm._v(" 喔不...你答錯了哦！ ")]),
+                _vm._v(" "),
+                _c("v-spacer")
+              ],
+              1
+            )
+          ]
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.show_main_component ? _c("Main") : _vm._e()
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+    __webpack_require__(/*! vue-hot-reload-api */ "./node_modules/vue-hot-reload-api/dist/index.js")      .rerender("data-v-12b63ded", { render: render, staticRenderFns: staticRenderFns })
+  }
+}
 
 /***/ }),
 
@@ -1305,20 +1674,22 @@ var render = function() {
               _c(
                 "v-card-text",
                 [
-                  _c("VueTyper", {
-                    attrs: {
-                      text: _vm.sentences,
-                      repeat: 0,
-                      shuffle: false,
-                      "initial-action": "typing",
-                      "pre-type-delay": 1000,
-                      "type-delay": 200,
-                      "erase-delay": 500,
-                      "erase-style": "clear",
-                      "erase-on-complete": false,
-                      "caret-animation": "smooth"
-                    }
-                  })
+                  _vm.partially_judge
+                    ? _c("VueTyper", {
+                        attrs: {
+                          text: _vm.sentences,
+                          repeat: 0,
+                          shuffle: false,
+                          "initial-action": "typing",
+                          "pre-type-delay": 1000,
+                          "type-delay": 200,
+                          "erase-delay": 500,
+                          "erase-style": "clear",
+                          "erase-on-complete": false,
+                          "caret-animation": "smooth"
+                        }
+                      })
+                    : _vm._e()
                 ],
                 1
               ),
@@ -1555,7 +1926,7 @@ var render = function() {
   return _c(
     "div",
     { attrs: { id: "app" } },
-    [_c("v-app", { attrs: { id: "inspire" } }, [_c("Main")], 1)],
+    [_c("v-app", { attrs: { id: "inspire" } }, [_c("Login")], 1)],
     1
   )
 }
@@ -1593,6 +1964,38 @@ if(true) {
  if(!content.locals) {
    module.hot.accept(/*! !../../node_modules/css-loader/dist/cjs.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"scoped":false,"sourceMap":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app.vue */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"scoped\":false,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/app.vue", function() {
      var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"scoped":false,"sourceMap":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app.vue */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"scoped\":false,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/app.vue");
+     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"scoped\":false,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/login.vue":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"scoped":false,"sourceMap":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/login.vue ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"scoped":false,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./login.vue */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"scoped\":false,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/login.vue");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("0131a2a0", content, false, {});
+// Hot Module Replacement
+if(true) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"scoped":false,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./login.vue */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"scoped\":false,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/login.vue", function() {
+     var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/style-compiler?{"optionsId":"0","vue":true,"scoped":false,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./login.vue */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"scoped\":false,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/login.vue");
      if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
      update(newContent);
    });
@@ -1687,6 +2090,69 @@ if (true) {(function () {
     hotAPI.createRecord("data-v-7d73c7f4", Component.options)
   } else {
     hotAPI.reload("data-v-7d73c7f4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+
+/***/ "./src/js/components/login.vue":
+/*!*************************************!*\
+  !*** ./src/js/components/login.vue ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_login_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !babel-loader!../../../node_modules/vue-loader/lib/selector?type=script&index=0!./login.vue */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/js/components/login.vue");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_12b63ded_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_login_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-12b63ded","hasScoped":false,"optionsId":"0","buble":{"transforms":{}}}!../../../node_modules/vue-loader/lib/selector?type=template&index=0!./login.vue */ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-12b63ded\",\"hasScoped\":false,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/js/components/login.vue");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/component-normalizer */ "./node_modules/vue-loader/lib/runtime/component-normalizer.js");
+var disposed = false
+function injectStyle (context) {
+  if (disposed) return
+  __webpack_require__(/*! !vue-style-loader!css-loader?sourceMap!../../../node_modules/vue-loader/lib/style-compiler/index?{"optionsId":"0","vue":true,"scoped":false,"sourceMap":true}!../../../node_modules/vue-loader/lib/selector?type=styles&index=0!./login.vue */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"optionsId\":\"0\",\"vue\":true,\"scoped\":false,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/js/components/login.vue")
+}
+/* script */
+
+
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+
+var Component = Object(_node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_login_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_12b63ded_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_login_vue__WEBPACK_IMPORTED_MODULE_1__["render"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_12b63ded_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_login_vue__WEBPACK_IMPORTED_MODULE_1__["staticRenderFns"],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/js/components/login.vue"
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(/*! vue-hot-reload-api */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  hotAPI.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.js"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-12b63ded", Component.options)
+  } else {
+    hotAPI.reload("data-v-12b63ded", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
